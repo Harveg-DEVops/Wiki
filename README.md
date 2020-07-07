@@ -1,7 +1,7 @@
 # Wiki
 Informationen zu der Architektur und Hintergrundinformationen der Jättruppe
 
-+++ Hallo zusammen, Willkommen im Team von Harveg
+### Hallo zusammen, Willkommen im Team von Harveg
 
 Einen ersten Eindruck über die Idee hinter diesem hübschen Plätzchen auf Github hat bereits der Name Jätttruppe und der Ort im Garten verraten.
 Richtig wir arbeiten im Garten und werden mit einer vielzahl von Werkzeugen versuchen etwas schönes Anzubauen, was gut gedeiht und nicht gleich bei der ersten Trockenpahse eingeht.
