@@ -19,6 +19,11 @@ Konnektivität
 *	2x micro-HDMI
 * GPIO	Standardisierter Raspberry Pi 40 pin GPIO Heade
 
+### Datenspeicher
+Für die speicherhungrige Datenbank und auch um eine genügende hohe Verfügbarkeit zu erhalten, verwenden wir keine SD Karten. Weshalb wir dem Raspberry pi über USB 3.0 einen externen NVME Datenträger anbinden:
+* Gehäuse: https://www.raidsonic.de/index.php?we_objectID=5665
+* Speicher: https://www.intenso.de/produkte/solid-state-drives/m.2-SSD-PCIe
+
 ## Konfiguration
 
 ### Netzwerkeinstellungen
