@@ -10,4 +10,4 @@ Zum Jätten soll gesagt sein, dass ich selber kein Profi bin weshalb es wichtig 
 
 Wir treffen uns natürlich nicht nur virtuell zu Jätten sondern auch bei uns im Testcenter in Burgdorf, dort gibts neben dem guten Bier auch eine Werkstatt mit vielen Möglichkeiten zum kreativ werden, wenn Ihr mal aus der virtuellen Welt ausbrechen wollt;)
 
-So nun viel Spass beim Jätten! Ach für die welche es noch nicht realisiert haben Jätten = Coden
+So nun viel Spass beim Jäten! Ach für die welche es noch nicht realisiert haben Jätten = Coden
