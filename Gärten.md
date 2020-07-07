@@ -11,4 +11,4 @@ Im Garten hat es auch eine kleine Minibar falls Ihr einmal am verdursten seit...
 3. ### Produktive Umgebung
 Hier wird es nun ernst wir haben für die Entwicklung bereits einen sehr grossen Garten mit X-Tausend Pflanzen welcher eine riesen Möglichkeit bietet. 
 Das Projekt dahinter nennt sich hiag und der Code ist hier abgelegt: [hiag Repository](https://github.com/Harveg/hiag)
-Zudem findet Ihr hier ein eigenes Wiki zu diesem Projekt: [hiag Wiki](https://github.com/Harveg/hiag.wiki.git)
+Zudem findet Ihr hier ein eigenes Wiki zu diesem Projekt: [hiag Wiki](https://github.com/Harveg/hiag/wiki)
