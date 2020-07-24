@@ -3,7 +3,7 @@ Wir haben neben der unendlichen Weite des Internets noch andere Gärten wo wir u
 1. ### Entwicklungsumgebung 
 Hier kann jeder sein Garten selber einrichten und wir haben die Möglichkeit unser Code entweder über ein eigenes Azure Notebook zu testen oder auch einem eigenen Raspberry welches im Testcenter ist.
 [Azure Notebook](https://notebooks.azure.com/Nevel/projects/harveg-public)
-
+* Für Python scripte: [Pycharm](https://www.jetbrains.com/de-de/pycharm/)
 2. ### Testumgebung
 Dieser Garten bauen wir in Burgdorf (Testcenter) auf und er bietet die Möglichkeit auf einer kleinen Auswahl an Hardware Tests zu machen und auch die Funktionen in Betrieb zu testen.
 Im Garten hat es auch eine kleine Minibar falls Ihr einmal am verdursten seit...
