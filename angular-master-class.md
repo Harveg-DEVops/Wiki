@@ -39,5 +39,14 @@ Debuggen immer für die Laufzeit innerhalb der developer tools im browser
 Directive hat keine eingens Template im Gengensatz zu Component
 directive erweitert eie component z.B. mat-list-item *ngFor="let item of items" erweiter jedes Element in mat-list-item mit einer lokalen variabel
 
+HTTP in Angular
+Es gibt zum fetchen von Daten di eXMLHttpRequest API wobei diese funktion auch für JSON Abfragen funktioniert
+
+HttpClientModul: Wird als Modul importiert Konvertiert response string automatisch z.B. import{ HttpClientModul } from 
+Error handling with retry()
+
+
+### Projekt Vorlage für GUI:
+
 Vorlage für Openhab UI https://github.com/jh1777/OpenHabUI
 https://community.openhab.org/t/customizable-dashboard-ui/97894
