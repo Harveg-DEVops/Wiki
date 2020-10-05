@@ -11,7 +11,7 @@ für die deklaration einer "klasse" wird ein Interface definiert (Art Vertrag wo
 Für Objekte welche keine Methoden haben (Nur Form definiert werden) einfach interface verwenden. (Interfaces generieren keinen code)
 const enum generieren auch keinen code
 
-ANgular ist basierend auf Bausteine welche immer aus Klassen besteht auch Module sind klassen!
+Angular ist basierend auf Bausteine welche immer aus Klassen besteht auch Module sind klassen!
 
 Decorator: Wird benötigt um aus einer Klasse eine Komponente zu bauen (Logik, Template, Style) -- Logik (klasse) template & Styles (decorator)
 selector gibt an wo das template gerendert wird (definiert den Rahmen)
@@ -21,7 +21,7 @@ Jede KOmponente muss an die NgModule gehängt wrden (registirert werden)
 Das Wurzelmodul kann weitere Module imprtieren (daraus generieren wir einen Baum) Zuoberst ist das Root.module
 
 ROOT MODULE:
-import ...
+```import ...
 
 @NgModule ({
   imports : [BrowserModule],
@@ -33,3 +33,11 @@ import ...
   
   BOOTSTRAPPING (Motor Starten)
   import {
+  ```
+Debuggen immer für die Laufzeit innerhalb der developer tools im browser
+
+Directive hat keine eingens Template im Gengensatz zu Component
+directive erweitert eie component z.B. mat-list-item *ngFor="let item of items" erweiter jedes Element in mat-list-item mit einer lokalen variabel
+
+Vorlage für Openhab UI https://github.com/jh1777/OpenHabUI
+https://community.openhab.org/t/customizable-dashboard-ui/97894
