@@ -50,3 +50,6 @@ Error handling with retry()
 
 Vorlage für Openhab UI https://github.com/jh1777/OpenHabUI
 https://community.openhab.org/t/customizable-dashboard-ui/97894
+Variante in Node-RED:
+https://flows.nodered.org/node/node-red-contrib-uibuilder
+https://discourse.nodered.org/t/node-red-dashboard-performance-across-tablets-mobiles/30330/8
