@@ -12,3 +12,6 @@ sudo mount /dev/sdb1 /media/usb
 sudo cp -r "source directory" /media/usb
 
 sudo umount /media/usb
+
+In Case of corruption on the external disk (usb drive):
+In the unlikely case that the reboot does not succeed, please put the SD card into another device and copy back '/boot/cmdline.txt.sdcard' to '/boot/cmdline.txt'.
