@@ -1,7 +1,7 @@
 The current backups of the development system:
 /var/lib/openhab2/backups/openhab2-backup-20_09_20-15_06_39.zip
 /var/lib/openhab2/backups/openhab2-backup-20_10_26-11_25_22.zip
-
+/var/lib/openhab2/backups/openhab2-backup-20_11_22-14_18_10.zip
 
 lsblk
 
