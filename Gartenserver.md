@@ -2,11 +2,11 @@
 Der Server ist als Notlösung erstmas ein Desktop PC mit 1TB SSD und Ubuntu 18.04 welches als Betriebssystem für folgende Applikationen gewählt wurde:
 
 * Docker (Keine Ahnung was das ist aber alle sprechen davon;)--> SrumMaster
-* <Radical>[https://radicale.org/3.0.html] CalDAV Server, damit werden wir den Anbau planen können (Wird aktuell mittels Nutzung von nextcloud auf nextcloud.harveg.ch obsolet)
+* Nextcloud nextcloud.harveg.ch / <Radical>[https://radicale.org/3.0.html] CalDAV Server, damit werden wir den Anbau planen können (Wird aktuell mittels Nutzung von nextcloud auf nextcloud.harveg.ch obsolet)
 * <Resilio Sync>[https://help.resilio.com/hc/en-us/categories/200140177-Get-started-with-Sync] (Peer to Peer Datensynchronisation)
 * <Farmbot-Web-App>[https://github.com/FarmBot/Farmbot-Web-App] (Testserver für Farmbot wird erst selber gehostet wenn die entsprechende Manpower vorhanden ist)
 
-# Setup
+# Setup (under construction)
 Ubuntu 18.04 TBD
 Python 3.7 TBD
 Radical 3.0 https://radicale.org/3.0.html#tutorials/simple-5-minute-setup
