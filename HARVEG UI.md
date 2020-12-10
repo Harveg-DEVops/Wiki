@@ -1,6 +1,6 @@
 ### new UI based on Angular
 
-Idee: Das aktuelle Habpanel UI ist für unsere Bedürfnisse nur bedingt geeignet und birgt die Gefahr, dass die Kompatibilität in der Zukunft nicht mehr vorhanden ist. Für die Steuerung der digitalproduction Plattform wird eine WebApp nötig sein welche lokal sowie auch via Internet den Controller steuern kann. Diese WebApp stellt alle wichtigsten Funktionen dar welche auf dem Controller laufen und geben dem Nutzter die Möglichkeit sein UI entsprechend den genutzten Funktionen zu konfigurieren. 
+Idee: Das aktuelle Habpanel UI (von OpenHAB) ist für unsere Bedürfnisse nur bedingt geeignet und birgt die Gefahr, dass die Kompatibilität in der Zukunft nicht mehr vorhanden ist. Für die Steuerung der digitalproduction Plattform wird eine WebApp nötig sein welche lokal sowie auch via Internet den Controller steuern kann. Diese WebApp stellt alle wichtigsten Funktionen dar welche auf dem Controller laufen und geben dem Nutzter die Möglichkeit sein UI entsprechend den genutzten Funktionen zu konfigurieren.-->https://www.openhab.org/docs/configuration/restdocs.html
 ...Brainstorming...
 
 Ausblick 2.0: Das WebApp soll auch für die steuerung des Anbaus (Farmbots) genutzt werden und an die REST API fom Farmbot WebApp angebunden werden können--> siehe:
