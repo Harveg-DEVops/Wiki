@@ -1,10 +1,7 @@
 ### Openhabian on Raspberry 4 Mod. B
-Der Raspberry Pi und andere kleine Einplatinencomputer sind ziemlich berühmte Plattformen für openHAB welches wir als Basis verwenden. 
-Die Einrichtung eines voll funktionsfähigen Linux-Systems mit allen empfohlenen Paketen und openHAB-Empfehlungen ist jedoch eine langweilige Aufgabe, die einige Zeit in Anspruch nimmt, und Linux-Neulinge sollten sich über diese technischen Details keine Gedanken machen. 
-openHABian zielt darauf ab, ein selbstkonfigurierendes Linux-System bereitzustellen, das speziell auf die Bedürfnisse jedes openHAB-Benutzers zugeschnitten ist. 
-Zu diesem Zweck bietet das Projekt zwei Dinge:
+Der Raspberry Pi und andere kleine Einplatinencomputer sind ziemlich bekannte Plattformen für openHAB welches wir als Basis verwenden. Die Einrichtung eines voll funktionsfähigen Linux-Systems mit allen empfohlenen Paketen und openHAB-Empfehlungen ist jedoch eine langweilige Aufgabe, die einige Zeit in Anspruch nimmt, und Linux-Neulinge sollten sich über diese technischen Details keine Gedanken machen. openHABian zielt darauf ab, ein selbstkonfigurierendes Linux-System bereitzustellen, das speziell auf die Bedürfnisse jedes openHAB-Benutzers zugeschnitten ist. Zu diesem Zweck bietet das Projekt zwei Dinge:
 * Vollständige SD-Karten-Images, die mit openHAB und vielen anderen openHAB- und Hardware-spezifischen Vorbereitungen für die Raspberry Pi und die Pine A64 vorkonfiguriert sind.
-* Das openHABian-Konfigurationswerkzeug, um openHAB und viele verwandte Dinge auf jedem Debian/Ubuntu-basierten System einzurichten und zu konfigurieren
+* Das openHABian-Konfigurationswerkzeug, um openHAB und viele weitere Dienste auf jedem Debian/Ubuntu-basierten System einzurichten und zu konfigurieren 
 
 ### Controller Hardware
 Prozessor / SoC	Broadcom BCM2711, Quad core Cortex-A72 64-bit SoC @ 1.5 GHz.
