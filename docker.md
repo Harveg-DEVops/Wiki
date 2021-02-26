@@ -8,11 +8,12 @@ Einen umfassenden Einblick in die Welt von Docker gibt folgender Beitrag von Chr
 ### Docker-Container basieren auf Images
 * Images werden über Dockerfile definiert
 * oder das Speichern von Containern
-* Docker-Images werden in Registries gespeichert
 
-### DockerHub
+### Docker-Images werden in Registries gespeichert
+* DockerHub
+* GitHub Packages container registry: ghcr.io/OWNER/IMAGE-NAME  
 
-Docker-Host ist die Maschine, auf der der Docker-Daemon läuft  
+### Docker-Host ist die Maschine, auf der der Docker-Daemon läuft  
 Linux oder Mac oder Windows, wo wir Docker installieren, ist Docker-Host  
 
 ### Docker-Client
