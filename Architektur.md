@@ -1,3 +1,16 @@
+### Hardware  
+
+Produktename für Kunde    | 	Lieferant       |  Eigenschaften  
+--------------------------|-------------------|-----------------  
+WLAN Uni - Hub            |  Shelly / HARVEG  |  Sensor Aktor Box, Vielzahl Anbindungsmöglichkeiten, 4 Ports, ohne Sensorik  
+WLAN Uni - Hub HT	        |  Shelly / HARVEG  |  Sensor Box, Feucht. / Temp., 4 Ports,  ohne Sensorik, mit Umschalter  
+WLAN Controller           |	 Andino           |  Schaltzentrale, für Openhab, Grafana,  ohne Sensorik  
+WLAN Controller LTE	      |  Andino           |  Schaltzentrale mit LTE Modem für Openhab, Grafana,  ohne Sensorik  
+Netzwerk - Controller     |  Rasperry / SEEED |  Schaltzentrale für Daten (Back Up) für Openhab, Grafana, Datenbank, 32GB  
+
+https://nextcloud.harveg.ch/index.php/f/6952  
+
+
 ### Openhabian on Raspberry 4 Mod. B
 Der Raspberry Pi und andere kleine Einplatinencomputer sind ziemlich bekannte Plattformen für openHAB welches wir als Basis verwenden. Die Einrichtung eines voll funktionsfähigen Linux-Systems mit allen empfohlenen Paketen und openHAB-Empfehlungen ist jedoch eine langweilige Aufgabe, die einige Zeit in Anspruch nimmt, und Linux-Neulinge sollten sich über diese technischen Details keine Gedanken machen. openHABian zielt darauf ab, ein selbstkonfigurierendes Linux-System bereitzustellen, das speziell auf die Bedürfnisse jedes openHAB-Benutzers zugeschnitten ist. Zu diesem Zweck bietet das Projekt zwei Dinge:
 * Vollständige SD-Karten-Images, die mit openHAB und vielen anderen openHAB- und Hardware-spezifischen Vorbereitungen für die Raspberry Pi und die Pine A64 vorkonfiguriert sind.
