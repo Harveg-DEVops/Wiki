@@ -1,18 +1,26 @@
-### new UI based on Angular
+# New UI based on Openhab 3
 
-Idee: Das aktuelle Habpanel UI (von OpenHAB) ist für unsere Bedürfnisse nur bedingt geeignet und birgt die Gefahr, dass die Kompatibilität in der Zukunft nicht mehr vorhanden ist. Für die Steuerung der digitalproduction Plattform wird eine WebApp nötig sein welche lokal sowie auch via Internet den Controller steuern kann. Diese WebApp stellt alle wichtigsten Funktionen dar welche auf dem Controller laufen und geben dem Nutzter die Möglichkeit sein UI entsprechend den genutzten Funktionen zu konfigurieren.-->https://www.openhab.org/docs/configuration/restdocs.html
+In der folgenden Tabelle sind die verschiedenen Seitentypen und ihre Kompatibilität zusammengefasst:
+
+|Typ|Gestaltet in|Angesehen in|Gespeichert in|
+|----|-----------|---------|---------|
+|Home|Haupt-UI|Haupt-UI|JSON DB|
+|[Sitemap](./sitemaps.html)|Haupt-UI oder `.sitemap`-Datei|Basic UI, iOS/Android Apps und andere|Konfigurationsordner oder JSON DB|
+|[Layout](./layout-pages.html)|Haupt-UI|Haupt-UI|JSON DB|
+|[Karte](./Karte-Seiten.html)|Haupt-UI|Haupt-UI|JSON DB|
+|[Grundriss](./Grundriss-Seiten.html)|Haupt UI|Haupt UI|JSON DB|
+|[Diagramm](./Diagramm-Seiten.html)|Haupt-UI|Haupt-UI|JSON DB|
+|[Registerkarte](./Registerkarten-Seiten.html)|Haupt-UI|Haupt-UI|JSON DB|
+
+Übersetzt mit www.DeepL.com/Translator (kostenlose Version)
+>https://www.openhab.org/docs/ui/
 ...Brainstorming...
 
-Ausblick 2.0: Das WebApp soll auch für die steuerung des Anbaus (Farmbots) genutzt werden und an die REST API fom Farmbot WebApp angebunden werden können--> siehe:
-https://developer.farm.bot/v12/Documentation/web-app/rest-api 
+### Persönliche Widgets: Entwicklung & Verwendung
+Sie können die Bibliothek der Widgets, die Ihnen zur Verfügung stehen, erweitern, indem Sie persönliche Widgets erstellen, entweder selbst oder durch Kopieren von Beispielen aus der Community; dann können Sie sie auf Seiten wiederverwenden, bei Bedarf auch mehrfach, indem Sie einfach ihre Eigenschaften nach Ihren Bedürfnissen konfigurieren.
+Um ein neues persönliches Widget hinzuzufügen, klicken Sie als Administrator auf Entwicklerwerkzeuge und dann auf Widgets. Verwenden Sie die "+"-Schaltfläche, um ein neues Widget zu erstellen:
 
+### Widget Vorlage für GUI:
 
-### Projekt Vorlage für GUI:
-
-Vorlage für Openhab UI https://github.com/jh1777/OpenHabUI
-https://community.openhab.org/t/customizable-dashboard-ui/97894
-Variante in Node-RED:
-https://flows.nodered.org/node/node-red-contrib-uibuilder
-https://discourse.nodered.org/t/node-red-dashboard-performance-across-tablets-mobiles/30330/8
-Chrigu???
-https://puzzle.github.io/ng-time-chart/
+Vorlage für Input field: https://github.com/openhab/openhab-webui/pull/356#issue-493602831
+Vorlage für UI im Allgemeinen: https://community.openhab.org/t/building-pages-in-the-oh3-ui-documentation-draft-2-3/104392/240
