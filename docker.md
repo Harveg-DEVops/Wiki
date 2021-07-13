@@ -3,6 +3,8 @@
 Unsere SW-Architektur basiert auf Docker und nützt die docker-compose Erweiterung.
 Einen umfassenden Einblick in die Welt von Docker gibt folgender Beitrag von Chrigu: https://github.com/christofluethi/docklands/blob/master/docker-techtalk/docker-slides.pdf  
 
+Die Anweisungen für die Konfiguration der SW wird mittels docker-compose.yaml files gemacht und den entsprechenden config files. Auf dem Zielsystem (Controller) läuft eine Anwendung welche die Container lokal verwalten kann und mittels USB-Stick konfiguriert wird, respektive Upgrades aufgespielt werden. Die Container-Mgmt.-Anwendung läuft in node-red und ist selbst ein Container welcher somit durch den Upgrade Prozess aktualisiert werden muss.
+
 ## Basics
 
 ### Docker-Container basieren auf Images
@@ -37,7 +39,7 @@ isolieren und virtualisieren Systemressourcen (PIDs, UTS, userIDs, Netzwerk , ip
 
 4. **virtuelle Netzwerkbrücken**
 
-
+Die Container können nur begrenzt in einem virtuellen Netztwerk betrieben werden da z.B. Openhab sich stark auf den HOST bezieht und IP Konfiguration sowie Portfreigabe sehr umfassend ist, wird hier kein virtuelles Netztwerk verwendet und nur auf das host Netzwerk referenziert.
 
 
 
