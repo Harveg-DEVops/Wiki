@@ -49,3 +49,11 @@ Die Bibliothek wird als npm Packet installiert mit folgendem Befehl: ``~/.node-r
 ### Node-Red mit Tensor-flow integration
 https://developer.ibm.com/technologies/artificial-intelligence/tutorials/building-a-machine-learning-node-for-node-red-using-tensorflowjs/
 Basierend auf der Tensorflow.js Bibliothek lassen sich direkt die Module von TF in einen flow integrieren und über das json Format die Ergebnisse in Node-Red auswerten. 
+
+### Node-Red Crtypto with AES
+Es ist relativ simpel in Node-RED mit AES zu ver- und entschlüsseln. Man braucht dafür nicht wirklich einen "Third-Party-Contrib-Node"; denn dies kann einfach mit ein paar Zeilen Javascript in einem Funktionsknoten getan werden.
+In diesem Beitrag findet man einige funktionierende Funktionsknoten für Node-RED mit AES (Beispiel-Javascript und PHP-Code):
+https://www.unix.com/programming/283733-publish-subscribe-aes-256-encrypted-mqtt-messages-node-red-php-scripts.html
+
+Weitere Beispiele für die crypto.js libary:
+https://www.labnol.org/code/encrypt-decrypt-javascript-200307
