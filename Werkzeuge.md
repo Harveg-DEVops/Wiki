@@ -57,3 +57,25 @@ https://www.unix.com/programming/283733-publish-subscribe-aes-256-encrypted-mqtt
 
 Weitere Beispiele für die crypto.js libary:
 https://www.labnol.org/code/encrypt-decrypt-javascript-200307
+
+### Node-Red Docker management
+Beispiel wie das Container managment mittels node-red realisiert werden kann:https://skylar.tech/restarting-stuck-game-servers-with-node-red/
+
+Hinzufügen des .socket volumen für node-red mit folgendem compose-beispiel:
+  nodered:
+    container_name: nodered
+    build: ./services/nodered/.
+    restart: unless-stopped
+    privileged: true
+    environment:
+      - TZ=Etc/UTC
+    ports:
+      - "1880:1880"
+    volumes:
+      - "./volumes/nodered/data:/data"
+      - "/var/run/docker.sock:/var/run/docker.sock"
+    devices:
+      - "/dev/USB0:/dev/USB0"
+      - "/dev/ttyAMA0:/dev/ttyAMA0"
+
+Beispiel von :https://discourse.nodered.org/t/node-red-and-docker-and-mount/44227
