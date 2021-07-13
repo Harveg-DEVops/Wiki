@@ -46,3 +46,6 @@ Grundalge der X-State Machine ist die XState bibliothek von davidkpiano siehe: <
 Das Modul ical-Adapter fügt die nötige Verbindung zu dem CalDAV Dienst her, wlcher für die Anbauplanung eingesetzt wird. Die eingehenden Befehle werden entsprechend dem Topic verarbeitet sodass verschiedene Verhalten je nach Steuerungsgruppe abgebildet werden können. Primär werden die Abläufe wie Lichtsteuerung (light) & Sequenzensteuerung (job) verarbeitet welche zuvor als Kalender-Event auf dem CalDAV Dienst eingegeben wurden. Mehr Infos siehe: <https://flows.nodered.org/node/node-red-contrib-ical-events>
 Die Bibliothek wird als npm Packet installiert mit folgendem Befehl: ``~/.node-red`` ``npm install node-red-contrib-ical-events``
 
+### Node-Red mit Tensor-flow integration
+https://developer.ibm.com/technologies/artificial-intelligence/tutorials/building-a-machine-learning-node-for-node-red-using-tensorflowjs/
+Basierend auf der Tensorflow.js Bibliothek lassen sich direkt die Module von TF in einen flow integrieren und über das json Format die Ergebnisse in Node-Red auswerten. 
