@@ -33,7 +33,7 @@ Node-RED wurde entwickelt, um Konnektivität für die IoT-Welt zu bieten, daher 
 
 3. Gemeinsame Nutzung - Node-Red bietet eine einfache JSON-basierte Kopieren-Einfügen-Funktionalität, so dass jeder seine Algorithmen gemeinsam nutzen kann. 
 
-4. Stabilität - für 2 Monate Nutzung und nach 3 eingesetzten Instanzen auch Openhab 3.0 hatte ich keine Probleme mit der Stabilität von Node-RED oder mit Ausnahmeproblemen - es funktioniert einfach.
+4. Stabilität - für 2 Monate Nutzung und nach 3 eingesetzten Instanzen auch Openhab 3.0 hatte ich keine Probleme mit der Stabilität von Node-RED oder mit Ausnahmeproblemen - es funktioniert einfach. Für die sichere Verwendung von Node-red mit Internetanbindung empfielt sich folgendes Tutorial: http://stevesnoderedguide.com/securing-node-red-ssl
 
 Die Installation ist dank der Konsole in Openhabian kinderleicht und es werden dierekt die nötigen npm module installiert weiche für die Anbindung an Openhab nötig sind.
 
@@ -62,6 +62,7 @@ https://www.labnol.org/code/encrypt-decrypt-javascript-200307
 Beispiel wie das Container managment mittels node-red realisiert werden kann:https://skylar.tech/restarting-stuck-game-servers-with-node-red/
 
 Hinzufügen des .socket volumen für node-red mit folgendem compose-beispiel:
+```json
   nodered:
     container_name: nodered
     build: ./services/nodered/.
@@ -77,5 +78,6 @@ Hinzufügen des .socket volumen für node-red mit folgendem compose-beispiel:
     devices:
       - "/dev/USB0:/dev/USB0"
       - "/dev/ttyAMA0:/dev/ttyAMA0"
+```
 
 Beispiel von :https://discourse.nodered.org/t/node-red-and-docker-and-mount/44227
