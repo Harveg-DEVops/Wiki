@@ -49,3 +49,10 @@ Parameter	Wert
 * Mask       =   255.255.255.0
 * Gateway    =   ????
 * IPV 6	OFF
+
+Für COntroller mit LTE Modem Wwan0
+
+Anweisung aus Andino System Seite: https://andino.systems/andino-io/products/andino-io_4g-modem  
+--> Automatisches starten des Verbindungsvorganges nach Systemstart über ein Script oder Cron job alle 10min welche das Modem Startet und entsprechend die Berechtigung hat die 
+4 Schnitstellen: USB0 bis USB4 (2 Datenverbindungen und eine Modem Befehlsverbindung USB2)  
+--> Die Verwendung des SMS Node mit dem Andino IO (LTE Modem) über die Serielle Schnitstelle ttyUSB2  
