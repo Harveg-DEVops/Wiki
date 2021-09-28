@@ -49,14 +49,21 @@ Parameter	Wert
 * Mask       =   255.255.255.0
 * Gateway    =   ????
 * IPV6	OFF
-
-/etc/hostapd/hostapd.conf  
-'''interface=wlan0  
+#### 802.11b/g/n with WPA2-PSK and CCMP
+A simple but secure AP with maximal compatibility for current hardware: /etc/hostapd/hostapd.conf  
+```interface=wlan0  
 driver=nl80211  
 ssid=<SSIDNAME>  
 hw_mode=g  
 channel=7  
-wmm_enabled=0  
+# limit the frequencies used to those allowed in the country  
+ieee80211d=1  
+# the country code  
+country_code=CH  
+# 802.11n support  
+ieee80211n=1  
+# QoS support, also required for full speed on 802.11n/ac/ax  
+wmm_enabled=1  
 macaddr_acl=0  
 auth_algs=1  
 ignore_broadcast_ssid=0  
@@ -64,8 +71,8 @@ wpa=2
 wpa_passphrase=<PASSWORD>  
 wpa_key_mgmt=WPA-PSK  
 wpa_pairwise=TKIP  
-rsn_pairwise=CCMP  
-'''
+rsn_pairwise=CCMP
+```  
 
 Für COntroller mit LTE Modem Wwan0
 
