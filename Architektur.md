@@ -30,7 +30,7 @@ Konnektivität
 * GPIO	Standardisierter Raspberry Pi 40 pin GPIO Heade
 
 ### Datenspeicher
-Für die speicherhungrige Datenbank und auch um eine genügende hohe Verfügbarkeit zu erhalten, verwenden wir keine SD Karten. Weshalb wir dem Raspberry pi über USB 3.0 einen externen NVME Datenträger anbinden:
+Für die speicherhungrige Datenbank und auch um eine genügende hohe Verfügbarkeit zu erhalten, verwenden wir nur hochwertige SD Karten ab 32GB, im Fall das eine USV vorhanden ist. Wenn keine USV angeschlossen wird welche ein sicheren shut-down garantiert müssen wir dem Raspberry pi über USB 3.0 einen externen NVME Datenträger anbinden:
 * Gehäuse: https://www.raidsonic.de/index.php?we_objectID=5665
 * Speicher: https://www.intenso.de/produkte/solid-state-drives/m.2-SSD-PCIe
 
@@ -48,7 +48,24 @@ Parameter	Wert
 * IPV4	IP   =   169.168.250.250 /250-254 reserviert für Controller
 * Mask       =   255.255.255.0
 * Gateway    =   ????
-* IPV 6	OFF
+* IPV6	OFF
+
+/etc/hostapd/hostapd.conf  
+'''interface=wlan0  
+driver=nl80211  
+ssid=<SSIDNAME>  
+hw_mode=g  
+channel=7  
+wmm_enabled=0  
+macaddr_acl=0  
+auth_algs=1  
+ignore_broadcast_ssid=0  
+wpa=2  
+wpa_passphrase=<PASSWORD>  
+wpa_key_mgmt=WPA-PSK  
+wpa_pairwise=TKIP  
+rsn_pairwise=CCMP  
+'''
 
 Für COntroller mit LTE Modem Wwan0
 
