@@ -45,7 +45,7 @@ Sofern die Plattform Zentral eingesetzt wird muss die Netzwerkinfrastruktur ents
 
 Für Controller AP Wlan0
 Parameter	Wert
-* IPV4	IP   =   169.254.250.250 /250-254 reserviert für Controller
+* IPV4	IP   =   169.168.250.250 /250-254 reserviert für Controller
 * Mask       =   255.255.255.0
 * Gateway    =   ????
 * IPV 6	OFF
