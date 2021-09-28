@@ -42,4 +42,5 @@ isolieren und virtualisieren Systemressourcen (PIDs, UTS, userIDs, Netzwerk , ip
 Die Container können nur begrenzt in einem virtuellen Netztwerk betrieben werden da z.B. Openhab sich stark auf den HOST bezieht und IP Konfiguration sowie Portfreigabe sehr umfassend ist, wird hier kein virtuelles Netztwerk verwendet und nur auf das host Netzwerk referenziert.
 
 
-
+### Docker-Config
+Die Docker Konfiguration wird im Verzeichnis config erstellt und enthält unterordner pro Container z.B. config/openhab die Verwaltung und docker-compose.yaml files sind im Ordner config/docker abgelegt.
