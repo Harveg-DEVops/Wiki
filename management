@@ -1,0 +1,8 @@
+## Preventing SD corruption
+Um die SD Karte bei einem Stromunterbruch zu schützen kann ein remounten des filesystem als read-only abhilfe schaffen.  
+
+https://mtyka.github.io/hardware/2018/10/09/read-only-pi.html
+
+Eine Erklärung wie im laufenden Betrieb mit force ein remoute gemacht werden kann:
+
+https://linuxtect.com/read-only-file-system-error-and-solutions/
