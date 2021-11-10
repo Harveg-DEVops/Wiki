@@ -61,9 +61,9 @@ ieee80211d=1
 # the country code  
 country_code=CH  
 # 802.11n support  
-ieee80211n=1  
+ieee80211n=0
 # QoS support, also required for full speed on 802.11n/ac/ax  
-wmm_enabled=1  
+wmm_enabled=0  
 macaddr_acl=0  
 auth_algs=1  
 ignore_broadcast_ssid=0  
@@ -74,7 +74,7 @@ wpa_pairwise=TKIP
 rsn_pairwise=CCMP
 ```  
 
-Für COntroller mit LTE Modem Wwan0
+Für Controller mit LTE Modem Wwan0
 
 Anweisung aus Andino System Seite: https://andino.systems/andino-io/products/andino-io_4g-modem  
 --> Automatisches starten des Verbindungsvorganges nach Systemstart über ein Script oder Cron job alle 10min welche das Modem Startet und entsprechend die Berechtigung hat die 
