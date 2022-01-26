@@ -1,8 +1,11 @@
 ## Aufbau
 Die Software Platform "Vertikaler Anbau" wird als Open-Source Code basierend auf dem Projekt Farmbot weitergeführt und alle Bestandteile der neuen SW-Architektur werden nachfolgend kurz erläutert.
 
-Farmbot Web-App (wird 1:1 übernommen und von Farmbot Inc gehostet): https://developer.farm.bot/docs/web-app  
-Kommunikations Schnitstelle zu unsere SW: Node-Red welches auf Linux Server läuft: https://github.com/Harveg-DEVops/Wiki/blob/master/Werkzeuge.md#node-red  
+#### Farmbot Web-App: [wird 1:1 übernommen und von Farmbot Inc gehostet](https://developer.farm.bot/docs/web-app) --> https://my.farmbot.io
+#### Node-Red: [Kommunikations Schnitstelle zwischen Farmbot & Open-Hab auf unserer Plattform Linux Server](https://github.com/Harveg-DEVops/Wiki/blob/master/Werkzeuge.md#node-red) --> http://digitalproduction:1880
+#### Open-Hab: [Linux-Server und GUI nachfolgend erklärt](https://github.com/openhab/openhabian) --> http://digitalproduction:8080
+
+
 
 ### Steuerung & GUI über Linux Server mit „openhabian" & Node-Red
 
@@ -86,5 +89,3 @@ rsn_pairwise=CCMP
 Hilfestellung: https://gist.github.com/christofluethi/1be3b5e6b9010a4d4bdcf2a892fedb47
 
 Erklärung IP-Adresse: https://de.ryte.com/wiki/IP-Adresse
-
-Arduino Firmware (Wird übernommen und wo nötig angepasst)
