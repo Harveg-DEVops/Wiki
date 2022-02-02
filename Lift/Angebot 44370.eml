@@ -1,0 +1,863 @@
+Delivered-To: nico.zeller@gmail.com
+Received: by 2002:ab3:5506:0:0:0:0:0 with SMTP id b6csp1388163ltc;
+        Mon, 23 Mar 2020 07:33:40 -0700 (PDT)
+X-Google-Smtp-Source: ADFU+vsvbsHBIvPk6OAJ1IvBUk9MUAnkXVkHuNa1CCrRhDcHbZ9XM5Re2B69LTj8Y7X4iCl9L8n5
+X-Received: by 2002:a05:6402:1acf:: with SMTP id ba15mr20688278edb.279.1584974019924;
+        Mon, 23 Mar 2020 07:33:39 -0700 (PDT)
+ARC-Seal: i=2; a=rsa-sha256; t=1584974019; cv=pass;
+        d=google.com; s=arc-20160816;
+        b=QdFeRlOnfqtWeNHV82d+KN5aH/4Xs4Jz0IUIvxyWzdJUwcT0eqkQnBR0kOO5+WXg74
+         8ClUZNTpFfwfT0iIh+4YmAeBARLMl72Nbz5HC4heDPUBnB6hQzq0l9jXxzqqo7o4+0u5
+         0fuQlZAEGyigEmMjcCIvgb9Al+4XUhlZ1OpHIm5MNAnTT3Dx19FkwG5MwRtYSbXW3z/s
+         ciuqEYIXJmcKm/2bmzt1PgE5qeZlugdOrTbI2Hxk3y59HfFJyphZ0dRd1r/mcDfzN6VK
+         dqUTDqQs8FaTruHq71TOBuVcK6iX4na5tvh2fAPYMXfBkOrJP4XJEgOXXHEjXAK5S6nO
+         TEdQ==
+ARC-Message-Signature: i=2; a=rsa-sha256; c=relaxed/relaxed; d=google.com; s=arc-20160816;
+        h=mime-version:content-language:accept-language:in-reply-to
+         :references:message-id:date:thread-index:thread-topic:subject:to
+         :from:dkim-signature;
+        bh=wBbKLtEyNsQA81t7EPLYreq4LFRoRHTBV2UmnNO7/YM=;
+        b=M2StV9xWcdNnVu2mhkzjYzSDaclhyQ+MKyifUohBY1q1yakGUOCG2Xwt2M7eypjmrM
+         0SKVz5+f4ZWLiHEUC4uVGsvtopbYxsfwH+Z3Kt8aJh8YlnXTSyy451O7z2V/qIu8BemH
+         DrLaXQebqvWiJ53EZ+WSoH8xQID9RsUefkLi0RqYjaUlnKzMzB2RBVCwvzCZp6J/T7h+
+         CoC112uVrYrU040IQl5GjMSXwL5itAjzQZnOdbPwRIsMEWj0TOybrrhPL2/Z554Td3Ma
+         PJXKhlVQl8ZY65Aa8vgxdg4v/IJzg24mQL706v5PDee+PnFOmFa4NOtx6dm8lRhsB4at
+         NmDg==
+ARC-Authentication-Results: i=2; mx.google.com;
+       dkim=pass header.i=@maedlernorm.onmicrosoft.com header.s=selector2-maedlernorm-onmicrosoft-com header.b=VBfAYNNo;
+       arc=pass (i=1 spf=pass spfdomain=maedler.ch dkim=pass dkdomain=maedler.ch dmarc=pass fromdomain=maedler.ch);
+       spf=pass (google.com: domain of beat.schwaninger@maedler.ch designates 40.107.8.83 as permitted sender) smtp.mailfrom=beat.schwaninger@maedler.ch
+Return-Path: <beat.schwaninger@maedler.ch>
+Received: from EUR04-VI1-obe.outbound.protection.outlook.com (mail-eopbgr80083.outbound.protection.outlook.com. [40.107.8.83])
+        by mx.google.com with ESMTPS id v12si2394479ejx.270.2020.03.23.07.33.39
+        for <nico.zeller@gmail.com>
+        (version=TLS1_2 cipher=ECDHE-RSA-AES128-GCM-SHA256 bits=128/128);
+        Mon, 23 Mar 2020 07:33:39 -0700 (PDT)
+Received-SPF: pass (google.com: domain of beat.schwaninger@maedler.ch designates 40.107.8.83 as permitted sender) client-ip=40.107.8.83;
+Authentication-Results: mx.google.com;
+       dkim=pass header.i=@maedlernorm.onmicrosoft.com header.s=selector2-maedlernorm-onmicrosoft-com header.b=VBfAYNNo;
+       arc=pass (i=1 spf=pass spfdomain=maedler.ch dkim=pass dkdomain=maedler.ch dmarc=pass fromdomain=maedler.ch);
+       spf=pass (google.com: domain of beat.schwaninger@maedler.ch designates 40.107.8.83 as permitted sender) smtp.mailfrom=beat.schwaninger@maedler.ch
+ARC-Seal: i=1; a=rsa-sha256; s=arcselector9901; d=microsoft.com; cv=none;
+ b=XCDuHp1ndtcMjnR1i81bmTj1tN7TAm3J6lTGHOXIRqMF3Lw7tiWsqvYs78Rp5Tv3UgkxN69rt5/efviqq9zz3mYmxnnx4/LZ4cIgag3lKymdaKGLqe20J2fMKMFFgH999vdF9OtnQU+E0Go6fL37sE5CSifJ03j0P5xlEcrC+nAov74TMapWOBFkJnAFt3tCGzOrSf/Z1Y+PH+rpJMTifyHJPlIBMNtc6GWLmqXCVn6f2+giEIs/KTgQks0HtyfVdEIb3O9tuOLiWCThqvxViKm1Co3Bl/rb9eiL8AmiXHVf5IovKrE8hdNsl6UNUHoDIVxeSmxVitccxWswF5ZKHA==
+ARC-Message-Signature: i=1; a=rsa-sha256; c=relaxed/relaxed; d=microsoft.com;
+ s=arcselector9901;
+ h=From:Date:Subject:Message-ID:Content-Type:MIME-Version:X-MS-Exchange-SenderADCheck;
+ bh=wBbKLtEyNsQA81t7EPLYreq4LFRoRHTBV2UmnNO7/YM=;
+ b=X52dF9obzmqlVJP5+y59c2/vLeomkzl7byGd0Q36WYLbOw5a7r8meo00Cyj+/J7hcGHE1zObvlZ8fmyWwKUNP62DvoM9asimQH60vAsiPvQ0J9tk/ffznFBa2OQC1MXN6s4fpn4bx/P+tD7LBX0hA7qwYczXU28siOusptTC04ICjJez+A3zBmzB4vXqFiw/gCFSsJUDZrKAe4wZSaIkG/akKqlKzwTFO3SvExT5jxWEvjtBgvpvXB2ixX5OQ3W4+jNoqiNqi4xZk/S/cjCf68lM3sJottbJanSYRxk0cqiDJQ5UnnDTPXtaUUsZBVQEuL6qe4HEEA2DFbZ+SRGv1g==
+ARC-Authentication-Results: i=1; mx.microsoft.com 1; spf=pass
+ smtp.mailfrom=maedler.ch; dmarc=pass action=none header.from=maedler.ch;
+ dkim=pass header.d=maedler.ch; arc=none
+DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed;
+ d=maedlernorm.onmicrosoft.com; s=selector2-maedlernorm-onmicrosoft-com;
+ h=From:Date:Subject:Message-ID:Content-Type:MIME-Version:X-MS-Exchange-SenderADCheck;
+ bh=wBbKLtEyNsQA81t7EPLYreq4LFRoRHTBV2UmnNO7/YM=;
+ b=VBfAYNNoDQos1NvXMj6RzSZIRdAi/f7IyEylieA5JT0WrKwmhlAXN1YJxLEKePJGuyraqu+0NFBNyV1+zpVQwVjR6f5E6dJ2XxLv1TAyx8jsiKqyN3s+ZyxPgVfAp9ebxh+xNo9m+roMPqc0fWt98z2f/p5HK/7ZNeR9cyzOQTU=
+Received: from AM7PR04MB7111.eurprd04.prod.outlook.com (52.135.57.75) by
+ AM7PR04MB7142.eurprd04.prod.outlook.com (52.135.56.9) with Microsoft SMTP
+ Server (version=TLS1_2, cipher=TLS_ECDHE_RSA_WITH_AES_256_GCM_SHA384) id
+ 15.20.2835.22; Mon, 23 Mar 2020 14:33:38 +0000
+Received: from AM7PR04MB7111.eurprd04.prod.outlook.com
+ ([fe80::4957:74:5d2c:c115]) by AM7PR04MB7111.eurprd04.prod.outlook.com
+ ([fe80::4957:74:5d2c:c115%4]) with mapi id 15.20.2835.021; Mon, 23 Mar 2020
+ 14:33:38 +0000
+From: Beat Schwaninger <beat.schwaninger@maedler.ch>
+To: "nico.zeller@gmail.com" <nico.zeller@gmail.com>
+Subject: AW: Angebot 44370
+Thread-Topic: Angebot 44370
+Thread-Index: AdX5EEvuAHLeshwNQoGm7MV7qqbZ0wID4tXQ
+Date: Mon, 23 Mar 2020 14:33:38 +0000
+Message-ID:
+ <AM7PR04MB7111AC9666D2CF5DBBA13BC6E2F00@AM7PR04MB7111.eurprd04.prod.outlook.com>
+References:
+ <DB7PR04MB5036694C749C9D6E082A777BE2FA0@DB7PR04MB5036.eurprd04.prod.outlook.com>
+In-Reply-To:
+ <DB7PR04MB5036694C749C9D6E082A777BE2FA0@DB7PR04MB5036.eurprd04.prod.outlook.com>
+Accept-Language: de-CH, en-US
+Content-Language: de-DE
+X-MS-Has-Attach: yes
+X-MS-TNEF-Correlator:
+authentication-results: spf=none (sender IP is )
+ smtp.mailfrom=beat.schwaninger@maedler.ch; 
+x-originating-ip: [84.16.166.35]
+x-ms-publictraffictype: Email
+x-ms-office365-filtering-correlation-id: 271eb439-cb0c-470c-f736-08d7cf372d25
+x-ms-traffictypediagnostic: AM7PR04MB7142:
+x-microsoft-antispam-prvs:
+ <AM7PR04MB714201C5BF15AEC792EFDB96E2F00@AM7PR04MB7142.eurprd04.prod.outlook.com>
+x-ms-oob-tlc-oobclassifiers: OLM:519;
+x-forefront-prvs: 0351D213B3
+x-forefront-antispam-report:
+ SFV:NSPM;SFS:(10009020)(346002)(136003)(39840400004)(396003)(376002)(366004)(199004)(8936002)(33656002)(19627235002)(81166006)(8676002)(81156014)(76116006)(66946007)(5660300002)(64756008)(66616009)(66446008)(66556008)(2906002)(316002)(44832011)(66476007)(66574012)(186003)(7116003)(71200400001)(86362001)(26005)(52536014)(6916009)(55016002)(9686003)(55236004)(7696005)(6506007)(508600001);DIR:OUT;SFP:1101;SCL:1;SRVR:AM7PR04MB7142;H:AM7PR04MB7111.eurprd04.prod.outlook.com;FPR:;SPF:None;LANG:de;PTR:InfoNoRecords;A:1;
+received-spf: None (protection.outlook.com: maedler.ch does not designate
+ permitted sender hosts)
+x-ms-exchange-senderadcheck: 1
+x-microsoft-antispam: BCL:0;
+x-microsoft-antispam-message-info:
+ hZo6/m9MLizc4kBLKtW4ivh991P2W3b1tYoaFOgPFOTViI7qOWaxh10OMsMlwwRCzRbWdf1ExsIUoNk58yzc8XY7ml1kk9l2ko7sUflW7WoiPQPHXH+S55THwu4R/0vcNpQaokJ/NmH9IL2hJ3sdOVVpewT8AU2qhZ16LEKynpsYOa1AT3N12O9Wh0t9w+If0PGBXn9FgsELIApUbGImXK8H0Y6Luuv8Z21M0QS3E5mlO8aDd9xYkF6Z9lKzBQATuMv8Zqztu0k1IHeT5AQJvnPkpXDXf0bHFtCEHSC891/kUJHxEXwLgR4H7vhNfol72Hl/1gPLii7YtWqx/VjE6rUGJN1j0qyXPnoMQIfBWl/OW0ykCAVCtxoYVh5OgeJ2rDSfb/KmMXc8IPudBsEjhC+MXy6i+NB83g8He/oRfEjI3i+tM4N6LDba/IaHVl5Scmca5HJVvqMYXuNJjXWUxIpsclcZByrb/2DHr9qcfn1RNR/QwHJjYJOkhxjBrtdffksReQhZYc2KWpRQU8iH5w==
+x-ms-exchange-antispam-messagedata:
+ DfyFeNg1bpSpAystECCNEJI1nwLosEywXXWU+gyQUXdwY64kTLlh3Ec7sB6v0NkbhiWk4rwMZGks5Jr8X711jLxo0CUyP0VhX3Fy0O+qGBcJrRNGTqsGQd/LidjKny3gggjBwPzSdBvgt/S9UnFBMg==
+x-ms-exchange-transport-forked: True
+Content-Type: multipart/related;
+	boundary="_004_AM7PR04MB7111AC9666D2CF5DBBA13BC6E2F00AM7PR04MB7111eurp_";
+	type="multipart/alternative"
+MIME-Version: 1.0
+X-OriginatorOrg: maedler.ch
+X-MS-Exchange-CrossTenant-Network-Message-Id: 271eb439-cb0c-470c-f736-08d7cf372d25
+X-MS-Exchange-CrossTenant-originalarrivaltime: 23 Mar 2020 14:33:38.2972
+ (UTC)
+X-MS-Exchange-CrossTenant-fromentityheader: Hosted
+X-MS-Exchange-CrossTenant-id: 3445931b-5e25-48f6-a2ff-559834c20470
+X-MS-Exchange-CrossTenant-mailboxtype: HOSTED
+X-MS-Exchange-CrossTenant-userprincipalname: OW189khltDT6QZX10mc6XrY5ncm2DHPIZM6rUQwqNa3Xlb/HeozeD1cPPjIccQifaLtkrtVrFdcTBPtpgv22C0zXLOoCuS5MDGmXIEi6YA8=
+X-MS-Exchange-Transport-CrossTenantHeadersStamped: AM7PR04MB7142
+
+--_004_AM7PR04MB7111AC9666D2CF5DBBA13BC6E2F00AM7PR04MB7111eurp_
+Content-Type: multipart/alternative;
+	boundary="_000_AM7PR04MB7111AC9666D2CF5DBBA13BC6E2F00AM7PR04MB7111eurp_"
+
+--_000_AM7PR04MB7111AC9666D2CF5DBBA13BC6E2F00AM7PR04MB7111eurp_
+Content-Type: text/plain; charset="iso-8859-1"
+Content-Transfer-Encoding: quoted-printable
+
+Guten Tag Herr Zeller
+
+Gem. Aussage vom Lieferant:
+Wir erzielen mit 1,1 kW an diesem Getriebe ein effektives Drehmoment von 18=
+3 Nm.
+Vorgabe von unserem Kunde ist erf=FCllt.
+
+
+
+Freundliche Gr=FCsse
+
+[cid:image001.png@01D60128.6B783D10]
+
+Beat Schwaninger
+
+M=E4dler Norm-Antrieb AG
+G=FCterstrasse 6
+CH-8245 Feuerthalen
+Tel:  +41 (052) 647 40 45
+Fax: +41 (052) 647 40 41
+www.maedler.ch<http://www.maedler.ch/>
+beat.schwaninger@maedler.ch<mailto:beat.schwaninger@maedler.ch>
+
+
+
+
+Von: Beat Schwaninger
+Gesendet: Freitag, 13. M=E4rz 2020 09:21
+An: nico.zeller@gmail.com
+Betreff: Angebot 44370
+
+
+Sehr geehrter Herr Zeller
+
+Besten Dank f=FCr Ihre Anfrage. Im Anhang erhalten Sie unser Angebot.
+
+Freundliche Gr=FCsse
+
+Beat Schwaninger
+
+M=C4DLER=AE Norm-Antrieb AG
+G=FCterstrasse 6
+8245 Feuerthalen
+Tel.:     052 647 40 40
+Fax:     052 647 40 41
+E-Mail: info@maedler.ch<mailto:info@maedler.ch>
+www.maedler.ch<http://www.maedler.ch>
+
+
+
+
+Allgemeine Verkaufs- und Lieferbedingungen
+
+Die Lieferungen erfolgen ausschliesslich auf Grund der nachstehenden
+Bestimmungen, deren Inhalt bei Auftragserteilung und im besonderen
+mit der Annahme unserer Offerten, Auftragsbest=E4tigungen, Fakturen als
+anerkannt gilt.
+
+1. Preise
+Alle Preise sind unverbindlich. Die offerierten Preise k=F6nnen nur dann
+aufrechterhalten werden, wenn auch die in der Offerte genannten
+Qualit=E4ten und Mengen unver=E4ndert und ungek=FCrzt bestellt werden. Die
+Preise werden auf Grund der am Tage der Offertstellung massgebenden
+Kosten kalkuliert. Wir m=FCssen uns deshalb vorbehalten, die Preise bei ein=
+er
+wesentlichen =C4nderung der Umst=E4nde, die f=FCr die Preisfestsetzung
+richtungsweisend waren, auch f=FCr noch nicht ausgef=FChrte Lieferungen
+den neuen Gegebenheiten anzupassen.
+
+2. Spedition, Porto, Verpackung
+Die Lieferung erfolgt innerhalb der Schweiz franko Domizil. Aus ge -
+nommen sind Sperrgut-, Express- und Nachnahmesendungen sowie
+Sendungen =FCber 30 kg oder ab 1,0Meter L=E4nge.
+
+3. Nutzen und Gefahr
+Nutzen und Gefahr gehen sp=E4testens mit Abgang der Lieferung ab Werk
+auf den Besteller =FCber. Wird der Versand auf Begehren des Bestellers
+oder aus sonstigen Gr=FCnden, die der Lieferant nicht zu vertreten hat, ver=
+z=F6gert,
+geht die Gefahr im urspr=FCnglich f=FCr die Ablieferung im Werk vorgesehene=
+n
+Zeitpunkt auf den Besteller =FCber. Von diesem Zeitpunkt an
+werden die Lieferungen auf Rechnung und Gefahr des Bestellers gelagert
+und versichert.
+
+4. Sonderanfertigungen
+F=FCr Sonderanfertigungen behalten wir uns eine Mehr- oder Min der lie -
+ferung von 10% vor. F=FCr die Richtigkeit der uns von den Kunden zugestellt=
+en
+Zeichnungen lehnen wir jede Haftung ab.
+
+5. Lieferzeit und Lieferm=F6glichkeit
+Die angegebene Lieferzeit ist ann=E4hernd zu verstehen und wird gerechnet
+vom Tage der Auftragsbest=E4tigung bis zum Versand ab Lager oder
+Werk. Voraussetzung f=FCr die Einhaltung der Lieferzeit ist, dass der
+Besteller seine Vertragspflichten erf=FCllt hat. Unvorhergesehene Hin -
+dernisse, die auch bei Anwendung der den Umst=E4nden nach zumutbaren
+Sorgfalt nicht abwendbar waren, sowie F=E4lle h=F6herer Gewalt, bei uns
+als auch bei unseren Vertragswerken, entbinden uns von der Einhaltung
+der Lieferfrist. Verz=F6gert sich die Ablieferung durch ein Verschulden des
+Bestellers, so behalten wir uns die Geltendmachung des Verzugs scha -
+dens vor. Teillieferungen sind zul=E4ssig.
+
+6. Zahlungen
+Die Fakturen sind innert 30 Tagen rein netto zahlbar, sofern nichts anderes
+ausdr=FCcklich vereinbart worden ist. Nach Ablauf der 30 Tage ist unsere
+Firma berechtigt, den Kunden durch Ansetzung einer Zahlungsfrist
+in Verzug zu setzen und ab Fristablauf Verzugszins und Spesen zu berechnen.
+Art. 107 OR. Die Zur=FCckbehaltung von Zahlungen oder
+Aufrechnung mit von uns nicht anerkannten Gegenanspr=FCchen ist ausgeschlos=
+sen.
+
+7. Eigentumsvorbehalt
+Die von uns gelieferte Ware bleibt bis zur vollst=E4ndigen Bezahlung s=E4mt=
+licher
+Forderungen aus der Gesch=E4ftsverbindung zwischen uns und dem
+K=E4ufer unser Eigentum.
+
+8. Gew=E4hrleistung
+Wir =FCbernehmen f=FCr die G=FCte unserer Ware nur insofern Gew=E4hr, als w=
+ir
+f=FCr innerhalb der vertraglich festgelegten Frist auftretende Herstellungs=
+oder
+Materialfehler durch Instandsetzung oder Ersatzlieferung nach unserer
+Wahl aufkommen. Anspr=FCche auf Schadenersatz, Wandlung des
+Kaufes oder Minderung des Kaufpreises lehnen wir ab. M=E4ngelr=FCgen
+sind sofort nach Erhalt der Ware, jedoch sp=E4testens innerhalb 8 Tagen,
+anzubringen. Im Falle von versteckten M=E4ngeln ist die M=E4ngelr=FCge sofo=
+rt
+nach deren Entdeckung anzubringen.
+
+9. Garantie
+Die Garantiezeit betr=E4gt 6 Monate. Sie beginnt mit der Versand -
+bereitschaft. F=FCr ersetzte Teile beginnt die Garantie neu zu laufen.
+Von der Garantie ausgeschlossen sind Sch=E4den infolge nat=FCrlicher
+Abn=FCtzung, mangelhafter Wartung, Missachtung von Betriebs vor schrif -
+ten, falscher Bedienung, =FCberm=E4ssiger Beanspruchung, ungeeignete
+Betriebsmittel, Korrosion und dergleichen. Die Garantie erlischt, wenn
+der Besteller oder Dritte ohne unsere schriftliche Zustimmung
+=C4nderungen oder Reparaturen an der Lieferung vornimmt.
+
+10. Erf=FCllungsort und Gerichtsstand
+Erf=FCllungsort und Gerichtsstand f=FCr den Besteller und f=FCr uns ist der=
+ Sitz
+der Firma M=E4dler Norm-Antrieb AG. Es gilt ausschliesslich das Recht der
+Schweiz.
+
+Mai 2012                       M=C4DLER=AE Norm-Antrieb AG
+
+Verkaufs-, Lieferungs- und Zahlungsbedingungen
+
+Bitte beachten Sie neben unseren Verkaufs- und Lieferungs bedin -
+gungen folgende Konditionen:
+
+Grundpreise:
+Die Grundpreise dieser Preisliste sind Nettopreise in Schweizer Fran -
+ken, exklusive Mehrwertsteuer. Die Lieferung erfolgt innerhalb der
+Schweiz franko Domizil. Ausgenommen sind Sperrgut-, Express-, Eilund
+Nach nahme sen dungen sowie Sendungen =FCber 30 kg oder ab
+1,0 Meter L=E4nge.
+S=E4gezuschlag und Trenngeb=FChr f=FCr Spindeln/Keilwellen/Ketten etc.:
+ab 5 St=FCck 10% des Warenwertes, Mindestbetrag Fr. 20.-
+
+Kleinauftr=E4ge:
+Kleinauftr=E4ge unter Fr. 100.- werden mit einer Bearbeitungsgeb=FChr in
+H=F6he von Fr. 15.- abgerechnet.
+
+Abrufauftr=E4ge:
+Bei Abrufauftr=E4gen wird nur dann der Staffelpreis der Gesamtmenge gew=E4h=
+rt,
+wenn der Warenwert der einzelnen Abrufe mindestens Fr. 250.-
+betr=E4gt. Sollte dies nicht der Fall sein, wird der Staffelpreis der Liefe=
+r -
+menge berechnet!
+
+M=E4ngelr=FCgen:
+Der Wareninhalt ist innerhalb von 8 Tagen auf Menge, Art, G=FCte und
+Beschaffenheit zu pr=FCfen. Nach- oder umgearbeitete Artikel sind
+grunds=E4tzlich vom Umtausch ausgeschlossen.
+
+R=FCcksendungen:
+Bei nicht von uns verschuldeten Retouren m=FCssen wir einen Bear bei -
+tungs zuschlag berechnen. Es werden vom gutzuschreibenden Waren -
+wert 10% abgezogen.
+Sonderanfertigungen, bearbeitete Artikel sowie nicht g=E4ngige Teile werden
+nicht zur=FCckgenommen.
+
+Zahlungsbedingungen:
+30 Tage rein netto (Skontoabz=FCge werden nachbelastet)
+Gr=F6ssere Auftr=E4ge und Sonderfertigungen:
+1/3 bei Erhalt der Auftragsbest=E4tigung (Termine laufen ab Zahlungs ein -
+gang)
+1/3 bei Versandbereitschaft, jedoch vor Auslieferung
+1/3 innerhalb 30 Tagen nach Rechnungsdatum
+
+Privatpersonen:
+An neue Privatkunden liefern wir nur gegen Vorauskasse. Nach komplettem
+Zahlungseingang (Gesamtbetrag zzgl. angegebener Versand -
+spesen) auf unserem Konto versenden wir die Artikel im auf der
+Auftragsbest=E4tigung angegebenen Lieferzeitraum.
+
+Vorbehalt:
+Ergeben sich Preis=E4nderungen infolge Teuerung, zus=E4tzliche fiskalische
+Belastungen oder W=E4hrungsschwankungen, erlauben wir uns, jederzeit
+entsprechende Anpassungen vorzunehmen.
+Es steht uns jederzeit frei, aus fabrikationstechnischen oder normungsbedin=
+gten
+Gr=FCnden an unseren genormten Artikeln Mass=E4nderungen
+vorzunehmen.
+Einseitig redigierte, generell erlassene sogenannte Gesch=E4fts- und
+Lieferbedingungen sind auf Rechtsgesch=E4fte, welche unsere Firma mit
+Kunden und Lieferanten abschliesst, nicht anwendbar und gelten hiermit
+von uns als unverbindlich abgelehnt.
+
+Mai 2012                       M=C4DLER=AE Norm-Antrieb AG
+
+--_000_AM7PR04MB7111AC9666D2CF5DBBA13BC6E2F00AM7PR04MB7111eurp_
+Content-Type: text/html; charset="iso-8859-1"
+Content-Transfer-Encoding: quoted-printable
+
+<html xmlns:v=3D"urn:schemas-microsoft-com:vml" xmlns:o=3D"urn:schemas-micr=
+osoft-com:office:office" xmlns:w=3D"urn:schemas-microsoft-com:office:word" =
+xmlns:m=3D"http://schemas.microsoft.com/office/2004/12/omml" xmlns=3D"http:=
+//www.w3.org/TR/REC-html40">
+<head>
+<meta http-equiv=3D"Content-Type" content=3D"text/html; charset=3Diso-8859-=
+1">
+<meta name=3D"Generator" content=3D"Microsoft Word 15 (filtered medium)">
+<!--[if !mso]><style>v\:* {behavior:url(#default#VML);}
+o\:* {behavior:url(#default#VML);}
+w\:* {behavior:url(#default#VML);}
+.shape {behavior:url(#default#VML);}
+</style><![endif]--><style><!--
+/* Font Definitions */
+@font-face
+	{font-family:"Cambria Math";
+	panose-1:2 4 5 3 5 4 6 3 2 4;}
+@font-face
+	{font-family:Calibri;
+	panose-1:2 15 5 2 2 2 4 3 2 4;}
+/* Style Definitions */
+p.MsoNormal, li.MsoNormal, div.MsoNormal
+	{margin:0cm;
+	margin-bottom:.0001pt;
+	font-size:11.0pt;
+	font-family:"Calibri",sans-serif;}
+a:link, span.MsoHyperlink
+	{mso-style-priority:99;
+	color:#0563C1;
+	text-decoration:underline;}
+a:visited, span.MsoHyperlinkFollowed
+	{mso-style-priority:99;
+	color:#954F72;
+	text-decoration:underline;}
+p.msonormal0, li.msonormal0, div.msonormal0
+	{mso-style-name:msonormal;
+	mso-margin-top-alt:auto;
+	margin-right:0cm;
+	mso-margin-bottom-alt:auto;
+	margin-left:0cm;
+	font-size:11.0pt;
+	font-family:"Calibri",sans-serif;}
+span.E-MailFormatvorlage20
+	{mso-style-type:personal-reply;
+	font-family:"Calibri",sans-serif;
+	color:windowtext;}
+.MsoChpDefault
+	{mso-style-type:export-only;
+	font-size:10.0pt;}
+@page WordSection1
+	{size:612.0pt 792.0pt;
+	margin:70.85pt 70.85pt 2.0cm 70.85pt;}
+div.WordSection1
+	{page:WordSection1;}
+--></style><!--[if gte mso 9]><xml>
+<o:shapedefaults v:ext=3D"edit" spidmax=3D"1026" />
+</xml><![endif]--><!--[if gte mso 9]><xml>
+<o:shapelayout v:ext=3D"edit">
+<o:idmap v:ext=3D"edit" data=3D"1" />
+</o:shapelayout></xml><![endif]-->
+</head>
+<body lang=3D"DE-CH" link=3D"#0563C1" vlink=3D"#954F72">
+<div class=3D"WordSection1">
+<p class=3D"MsoNormal"><span style=3D"mso-fareast-language:EN-US">Guten Tag=
+ Herr Zeller<o:p></o:p></span></p>
+<p class=3D"MsoNormal"><span style=3D"mso-fareast-language:EN-US"><o:p>&nbs=
+p;</o:p></span></p>
+<p class=3D"MsoNormal"><span style=3D"mso-fareast-language:EN-US">Gem. Auss=
+age vom Lieferant:<o:p></o:p></span></p>
+<p class=3D"MsoNormal"><span style=3D"mso-fareast-language:EN-US">Wir erzie=
+len mit 1,1 kW an diesem Getriebe ein effektives Drehmoment von 183 Nm.<o:p=
+></o:p></span></p>
+<p class=3D"MsoNormal"><span style=3D"mso-fareast-language:EN-US">Vorgabe v=
+on unserem Kunde ist erf=FCllt.<o:p></o:p></span></p>
+<p class=3D"MsoNormal"><span style=3D"mso-fareast-language:EN-US"><o:p>&nbs=
+p;</o:p></span></p>
+<p class=3D"MsoNormal"><span style=3D"mso-fareast-language:EN-US"><o:p>&nbs=
+p;</o:p></span></p>
+<p class=3D"MsoNormal"><span style=3D"mso-fareast-language:EN-US"><o:p>&nbs=
+p;</o:p></span></p>
+<div>
+<p class=3D"MsoNormal"><span style=3D"font-size:10.0pt">Freundliche Gr=FCss=
+e<o:p></o:p></span></p>
+<p class=3D"MsoNormal"><span style=3D"font-size:10.0pt"><o:p>&nbsp;</o:p></=
+span></p>
+<p class=3D"MsoNormal"><img width=3D"174" height=3D"77" style=3D"width:1.81=
+25in;height:.8055in" id=3D"Grafik_x0020_1" src=3D"cid:image001.png@01D60128=
+.6B783D10"><span style=3D"font-size:10.0pt"><o:p></o:p></span></p>
+<p class=3D"MsoNormal"><span style=3D"font-size:10.0pt"><o:p>&nbsp;</o:p></=
+span></p>
+<p class=3D"MsoNormal"><b><span style=3D"font-size:10.0pt">Beat Schwaninger=
+</span></b><b><span style=3D"font-size:10.0pt"><o:p></o:p></span></b></p>
+<p class=3D"MsoNormal"><span style=3D"font-size:10.0pt"><o:p>&nbsp;</o:p></=
+span></p>
+<p class=3D"MsoNormal"><b><span style=3D"font-size:10.0pt">M=E4dler Norm-An=
+trieb AG</span></b><span style=3D"font-size:10.0pt"><br>
+G=FCterstrasse 6<br>
+CH-8245 Feuerthalen<br>
+Tel:&nbsp; &#43;41 (052) 647 40 45<o:p></o:p></span></p>
+<p class=3D"MsoNormal"><span style=3D"font-size:10.0pt">Fax: &#43;41 (052) =
+647 40 41<br>
+<a href=3D"http://www.maedler.ch/" title=3D"http://www.maedler.ch/=0A=
+blocked::http://www.maedler.ch/"><span style=3D"color:windowtext">www.maedl=
+er.ch</span></a><br>
+<u><a href=3D"mailto:beat.schwaninger@maedler.ch"><span style=3D"color:wind=
+owtext">beat.schwaninger@maedler.ch</span></a></u><o:p></o:p></span></p>
+<p class=3D"MsoNormal"><o:p>&nbsp;</o:p></p>
+<p class=3D"MsoNormal"><u><span lang=3D"DE"><o:p><span style=3D"text-decora=
+tion:none">&nbsp;</span></o:p></span></u></p>
+<p class=3D"MsoNormal"><span lang=3D"DE" style=3D"font-size:12.0pt;font-fam=
+ily:&quot;Times New Roman&quot;,serif;mso-fareast-language:DE"><o:p>&nbsp;<=
+/o:p></span></p>
+</div>
+<p class=3D"MsoNormal"><span style=3D"mso-fareast-language:EN-US"><o:p>&nbs=
+p;</o:p></span></p>
+<div>
+<div style=3D"border:none;border-top:solid #E1E1E1 1.0pt;padding:3.0pt 0cm =
+0cm 0cm">
+<p class=3D"MsoNormal"><b><span lang=3D"DE">Von:</span></b><span lang=3D"DE=
+"> Beat Schwaninger
+<br>
+<b>Gesendet:</b> Freitag, 13. M=E4rz 2020 09:21<br>
+<b>An:</b> nico.zeller@gmail.com<br>
+<b>Betreff:</b> Angebot 44370<o:p></o:p></span></p>
+</div>
+</div>
+<p class=3D"MsoNormal"><o:p>&nbsp;</o:p></p>
+<p style=3D"margin-top:0cm"><span style=3D"font-size:8.0pt;font-family:&quo=
+t;Arial&quot;,sans-serif">Sehr geehrter Herr Zeller
+<br>
+<br>
+Besten Dank f=FCr Ihre Anfrage. Im Anhang erhalten Sie unser Angebot. <br>
+<br>
+Freundliche Gr=FCsse <br>
+<br>
+Beat Schwaninger <br>
+<br>
+<b>M=C4DLER=AE Norm-Antrieb AG</b> <br>
+G=FCterstrasse 6 <br>
+8245 Feuerthalen <br>
+Tel.:&nbsp; &nbsp; &nbsp;052 647 40 40 <br>
+Fax:&nbsp; &nbsp; &nbsp;052 647 40 41 <br>
+E-Mail: <a href=3D"mailto:info@maedler.ch">info@maedler.ch</a> <br>
+<a href=3D"http://www.maedler.ch">www.maedler.ch</a> <br>
+<br>
+<br>
+<br>
+<br>
+</span><b><span style=3D"font-size:12.0pt;font-family:&quot;Arial&quot;,san=
+s-serif">Allgemeine Verkaufs- und Lieferbedingungen</span></b><span style=
+=3D"font-size:8.0pt;font-family:&quot;Arial&quot;,sans-serif">
+<br>
+<br>
+Die Lieferungen erfolgen ausschliesslich auf Grund der nachstehenden <br>
+Bestimmungen, deren Inhalt bei Auftragserteilung und im besonderen <br>
+mit der Annahme unserer Offerten, Auftragsbest=E4tigungen, Fakturen als <br=
+>
+anerkannt gilt. <br>
+<br>
+<b>1. Preise</b> <br>
+Alle Preise sind unverbindlich. Die offerierten Preise k=F6nnen nur dann <b=
+r>
+aufrechterhalten werden, wenn auch die in der Offerte genannten <br>
+Qualit=E4ten und Mengen unver=E4ndert und ungek=FCrzt bestellt werden. Die =
+<br>
+Preise werden auf Grund der am Tage der Offertstellung massgebenden <br>
+Kosten kalkuliert. Wir m=FCssen uns deshalb vorbehalten, die Preise bei ein=
+er <br>
+wesentlichen =C4nderung der Umst=E4nde, die f=FCr die Preisfestsetzung <br>
+richtungsweisend waren, auch f=FCr noch nicht ausgef=FChrte Lieferungen <br=
+>
+den neuen Gegebenheiten anzupassen. <br>
+<br>
+<b>2. Spedition, Porto, Verpackung</b> <br>
+Die Lieferung erfolgt innerhalb der Schweiz franko Domizil. Aus ge - <br>
+nommen sind Sperrgut-, Express- und Nachnahmesendungen sowie <br>
+Sendungen =FCber 30 kg oder ab 1,0Meter L=E4nge. <br>
+<br>
+<b>3. Nutzen und Gefahr</b> <br>
+Nutzen und Gefahr gehen sp=E4testens mit Abgang der Lieferung ab Werk <br>
+auf den Besteller =FCber. Wird der Versand auf Begehren des Bestellers <br>
+oder aus sonstigen Gr=FCnden, die der Lieferant nicht zu vertreten hat, ver=
+z=F6gert, <br>
+geht die Gefahr im urspr=FCnglich f=FCr die Ablieferung im Werk vorgesehene=
+n <br>
+Zeitpunkt auf den Besteller =FCber. Von diesem Zeitpunkt an <br>
+werden die Lieferungen auf Rechnung und Gefahr des Bestellers gelagert <br>
+und versichert. <br>
+<br>
+<b>4. Sonderanfertigungen</b> <br>
+F=FCr Sonderanfertigungen behalten wir uns eine Mehr- oder Min der lie - <b=
+r>
+ferung von 10% vor. F=FCr die Richtigkeit der uns von den Kunden zugestellt=
+en <br>
+Zeichnungen lehnen wir jede Haftung ab. <br>
+<br>
+<b>5. Lieferzeit und Lieferm=F6glichkeit</b> <br>
+Die angegebene Lieferzeit ist ann=E4hernd zu verstehen und wird gerechnet <=
+br>
+vom Tage der Auftragsbest=E4tigung bis zum Versand ab Lager oder <br>
+Werk. Voraussetzung f=FCr die Einhaltung der Lieferzeit ist, dass der <br>
+Besteller seine Vertragspflichten erf=FCllt hat. Unvorhergesehene Hin - <br=
+>
+dernisse, die auch bei Anwendung der den Umst=E4nden nach zumutbaren <br>
+Sorgfalt nicht abwendbar waren, sowie F=E4lle h=F6herer Gewalt, bei uns <br=
+>
+als auch bei unseren Vertragswerken, entbinden uns von der Einhaltung <br>
+der Lieferfrist. Verz=F6gert sich die Ablieferung durch ein Verschulden des=
+ <br>
+Bestellers, so behalten wir uns die Geltendmachung des Verzugs scha - <br>
+dens vor. Teillieferungen sind zul=E4ssig. <br>
+<br>
+<b>6. Zahlungen</b> <br>
+Die Fakturen sind innert 30 Tagen rein netto zahlbar, sofern nichts anderes=
+ <br>
+ausdr=FCcklich vereinbart worden ist. Nach Ablauf der 30 Tage ist unsere <b=
+r>
+Firma berechtigt, den Kunden durch Ansetzung einer Zahlungsfrist <br>
+in Verzug zu setzen und ab Fristablauf Verzugszins und Spesen zu berechnen.=
+ <br>
+Art. 107 OR. Die Zur=FCckbehaltung von Zahlungen oder <br>
+Aufrechnung mit von uns nicht anerkannten Gegenanspr=FCchen ist ausgeschlos=
+sen. <br>
+<br>
+<b>7. Eigentumsvorbehalt</b> <br>
+Die von uns gelieferte Ware bleibt bis zur vollst=E4ndigen Bezahlung s=E4mt=
+licher <br>
+Forderungen aus der Gesch=E4ftsverbindung zwischen uns und dem <br>
+K=E4ufer unser Eigentum. <br>
+<br>
+<b>8. Gew=E4hrleistung</b> <br>
+Wir =FCbernehmen f=FCr die G=FCte unserer Ware nur insofern Gew=E4hr, als w=
+ir <br>
+f=FCr innerhalb der vertraglich festgelegten Frist auftretende Herstellungs=
+oder <br>
+Materialfehler durch Instandsetzung oder Ersatzlieferung nach unserer <br>
+Wahl aufkommen. Anspr=FCche auf Schadenersatz, Wandlung des <br>
+Kaufes oder Minderung des Kaufpreises lehnen wir ab. M=E4ngelr=FCgen <br>
+sind sofort nach Erhalt der Ware, jedoch sp=E4testens innerhalb 8 Tagen, <b=
+r>
+anzubringen. Im Falle von versteckten M=E4ngeln ist die M=E4ngelr=FCge sofo=
+rt <br>
+nach deren Entdeckung anzubringen. <br>
+<br>
+<b>9. Garantie</b> <br>
+Die Garantiezeit betr=E4gt 6 Monate. Sie beginnt mit der Versand - <br>
+bereitschaft. F=FCr ersetzte Teile beginnt die Garantie neu zu laufen. <br>
+Von der Garantie ausgeschlossen sind Sch=E4den infolge nat=FCrlicher <br>
+Abn=FCtzung, mangelhafter Wartung, Missachtung von Betriebs vor schrif - <b=
+r>
+ten, falscher Bedienung, =FCberm=E4ssiger Beanspruchung, ungeeignete <br>
+Betriebsmittel, Korrosion und dergleichen. Die Garantie erlischt, wenn <br>
+der Besteller oder Dritte ohne unsere schriftliche Zustimmung <br>
+=C4nderungen oder Reparaturen an der Lieferung vornimmt. <br>
+<br>
+<b>10. Erf=FCllungsort und Gerichtsstand</b> <br>
+Erf=FCllungsort und Gerichtsstand f=FCr den Besteller und f=FCr uns ist der=
+ Sitz <br>
+der Firma M=E4dler Norm-Antrieb AG. Es gilt ausschliesslich das Recht der <=
+br>
+Schweiz. <br>
+<br>
+Mai 2012 &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nb=
+sp; &nbsp; <b>M=C4DLER=AE</b> Norm-Antrieb AG <br>
+<br>
+</span><b><span style=3D"font-size:12.0pt;font-family:&quot;Arial&quot;,san=
+s-serif">Verkaufs-, Lieferungs- und Zahlungsbedingungen</span></b><span sty=
+le=3D"font-size:8.0pt;font-family:&quot;Arial&quot;,sans-serif">
+<br>
+<br>
+Bitte beachten Sie neben unseren Verkaufs- und Lieferungs bedin - <br>
+gungen folgende Konditionen: <br>
+<br>
+<b>Grundpreise:</b> <br>
+Die Grundpreise dieser Preisliste sind Nettopreise in Schweizer Fran - <br>
+ken, exklusive Mehrwertsteuer. Die Lieferung erfolgt innerhalb der <br>
+Schweiz franko Domizil. Ausgenommen sind Sperrgut-, Express-, Eilund <br>
+Nach nahme sen dungen sowie Sendungen =FCber 30 kg oder ab <br>
+1,0 Meter L=E4nge. <br>
+S=E4gezuschlag und Trenngeb=FChr f=FCr Spindeln/Keilwellen/Ketten etc.: <br=
+>
+ab 5 St=FCck 10% des Warenwertes, Mindestbetrag Fr. 20.&#8211; <br>
+<br>
+<b>Kleinauftr=E4ge:</b> <br>
+Kleinauftr=E4ge unter Fr. 100.&#8211; werden mit einer Bearbeitungsgeb=FChr=
+ in <br>
+H=F6he von Fr. 15.&#8211; abgerechnet. <br>
+<br>
+<b>Abrufauftr=E4ge:</b> <br>
+Bei Abrufauftr=E4gen wird nur dann der Staffelpreis der Gesamtmenge gew=E4h=
+rt, <br>
+wenn der Warenwert der einzelnen Abrufe mindestens Fr. 250.&#8211; <br>
+betr=E4gt. Sollte dies nicht der Fall sein, wird der Staffelpreis der Liefe=
+r - <br>
+menge berechnet! <br>
+<br>
+<b>M=E4ngelr=FCgen:</b> <br>
+Der Wareninhalt ist innerhalb von 8 Tagen auf Menge, Art, G=FCte und <br>
+Beschaffenheit zu pr=FCfen. Nach- oder umgearbeitete Artikel sind <br>
+grunds=E4tzlich vom Umtausch ausgeschlossen. <br>
+<br>
+<b>R=FCcksendungen:</b> <br>
+Bei nicht von uns verschuldeten Retouren m=FCssen wir einen Bear bei - <br>
+tungs zuschlag berechnen. Es werden vom gutzuschreibenden Waren - <br>
+wert 10% abgezogen. <br>
+Sonderanfertigungen, bearbeitete Artikel sowie nicht g=E4ngige Teile werden=
+ <br>
+nicht zur=FCckgenommen. <br>
+<br>
+<b>Zahlungsbedingungen:</b> <br>
+30 Tage rein netto (Skontoabz=FCge werden nachbelastet) <br>
+Gr=F6ssere Auftr=E4ge und Sonderfertigungen: <br>
+1/3 bei Erhalt der Auftragsbest=E4tigung (Termine laufen ab Zahlungs ein - =
+<br>
+gang) <br>
+1/3 bei Versandbereitschaft, jedoch vor Auslieferung <br>
+1/3 innerhalb 30 Tagen nach Rechnungsdatum <br>
+<br>
+<b>Privatpersonen:</b> <br>
+An neue Privatkunden liefern wir nur gegen Vorauskasse. Nach komplettem <br=
+>
+Zahlungseingang (Gesamtbetrag zzgl. angegebener Versand - <br>
+spesen) auf unserem Konto versenden wir die Artikel im auf der <br>
+Auftragsbest=E4tigung angegebenen Lieferzeitraum. <br>
+<br>
+<b>Vorbehalt:</b> <br>
+Ergeben sich Preis=E4nderungen infolge Teuerung, zus=E4tzliche fiskalische =
+<br>
+Belastungen oder W=E4hrungsschwankungen, erlauben wir uns, jederzeit <br>
+entsprechende Anpassungen vorzunehmen. <br>
+Es steht uns jederzeit frei, aus fabrikationstechnischen oder normungsbedin=
+gten <br>
+Gr=FCnden an unseren genormten Artikeln Mass=E4nderungen <br>
+vorzunehmen. <br>
+Einseitig redigierte, generell erlassene sogenannte Gesch=E4fts- und <br>
+Lieferbedingungen sind auf Rechtsgesch=E4fte, welche unsere Firma mit <br>
+Kunden und Lieferanten abschliesst, nicht anwendbar und gelten hiermit <br>
+von uns als unverbindlich abgelehnt. <br>
+<br>
+Mai 2012 &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nb=
+sp; &nbsp; <b>M=C4DLER=AE</b> Norm-Antrieb AG <o:p></o:p></span></p>
+</div>
+</body>
+</html>
+
+--_000_AM7PR04MB7111AC9666D2CF5DBBA13BC6E2F00AM7PR04MB7111eurp_--
+
+--_004_AM7PR04MB7111AC9666D2CF5DBBA13BC6E2F00AM7PR04MB7111eurp_
+Content-Type: image/png; name="image001.png"
+Content-Description: image001.png
+Content-Disposition: inline; filename="image001.png"; size=9287;
+	creation-date="Mon, 23 Mar 2020 14:33:37 GMT";
+	modification-date="Mon, 23 Mar 2020 14:33:37 GMT"
+Content-ID: <image001.png@01D60128.6B783D10>
+Content-Transfer-Encoding: base64
+
+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
+
+--_004_AM7PR04MB7111AC9666D2CF5DBBA13BC6E2F00AM7PR04MB7111eurp_--
