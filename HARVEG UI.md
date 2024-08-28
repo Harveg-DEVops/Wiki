@@ -1,9 +1,16 @@
-# New UI based on Openhab 3
-Das UI Basiert auf dem VUE [framwork 7](https://framework7.io/docs/app.html)  
-Die charts werden mit dem Apache echart framework erstellt siehe [Cheat-Sheet](https://echarts.apache.org/en/cheat-sheet.html)  
-*The final ECharts configuration is a “merge” of the transformation of the components in the slots (grid etc.) and this options object taken as-is.
-(Note that the merging is only done on top-level properties that are not covered by components so you can’t define grids with the grid option under the options config parameter of the chart page, same thing for axes, series and other components; however you can specify most ECharts options under grid in the oh-chart-grid components).
-The objects that aren’t supported in options and are taken from subcomponents are listed below in that return statement:* [OpenHab Echart implementation](https://github.com/openhab/openhab-webui/blob/0c2b25beb8cf3eebc1af120c82ad62f4d1ce6dea/bundles/org.openhab.ui/web/src/components/widgets/chart/chart-mixin.js#L56-L76)  
+# Grafische Benutzeroberfläche GUI von openHAB
+
+**Die Startseite**
+Die Startseite der Haupt-UI besteht aus 4 Registerkarten und bietet einer Übersicht über die Gesamtanlage;
+3 Registerkarten, die eine generierte Ansicht Ihres Modells (siehe Modell) darstellen und nach Standort, Ausrüstung und Eigenschaften geordnet sind. (Tabs unten am Bildrand)
+
+**HabAPP**
+Die HABPanel-Benutzeroberfläche wird standardmäßig installiert und ermöglicht die Erstellung von benutzerfreundlichen Dashboards neben der HAuptseite, die sich besonders für (z. B. an der Wand montierte) Tablets eignen. Diese Dashboards werden für den Schüler-Steuerung aus dem Klassenzimmer verwendet. 
+* Link1
+* Link2
+* Link3
+* Link4
+* Link5
 
 **In der folgenden Tabelle sind die verschiedenen Seitentypen und ihre Kompatibilität zusammengefasst:**
 
@@ -19,9 +26,44 @@ The objects that aren’t supported in options and are taken from subcomponents 
 
 
 >https://www.openhab.org/docs/ui/
-...Brainstorming...
 
-### Persönliche Widgets: Entwicklung & Verwendung
+
+### Modell
+Mit dem semantischen Modell können Sie Ihre openHAB-Objekte gruppieren und kategorisieren, um zusätzliche reale Beziehungen und Informationen über sie bereitzustellen. openHAB kann diese Informationen verwenden, um automatisch die Registerkarten Standort, Ausrüstung und Eigenschaften auf der Startseite zu generieren.
+Jedes semantische Modellobjekt (Standort, Ausrüstung oder Punkt) ist ein normales openHAB-Element mit semantischen Tags und in semantischen Gruppen angeordnet. Es ist wichtig zu beachten, dass nicht alle Ihre Objekte in das semantische Modell aufgenommen werden müssen. Für die meisten Systeme ist es sinnvoll, nur die Elemente aufzunehmen, mit denen die Benutzer interagieren werden.
+Auf dieser Seite können Sie das semantische Modell Ihres Systems verwalten:
+**Modell**
+
+
+### Rules
+Rules sind das Herzstück der Heimautomatisierung - automatisieren Sie mit Auslösern, Aktionen und Bedingungen. Regeln können so einfach sein wie eine Anweisung, ein einzelnes Licht zu einer bestimmten Zeit einzuschalten, aber die Verwendung von Skriptsprachen und Blockly ermöglicht auch viel komplexere Automatisierungen.
+Auf dieser Seite können Sie alle grundlegenden Regeln verwalten, die Sie zu Ihrem System hinzugefügt haben:  
+
+### Schedule
+Nächste zeitbasierte Regeln anzeigen.
+
+Wenn Sie eine Regel erstellen, fügen Sie das Tag `Schedule` hinzu und definieren einen Zeitauslöser,
+
+![timer-trigger](../images/timer-trigger.png)
+
+dann wird diese Regel in der Kalenderansicht auf dieser Seite angezeigt.
+Erstellen Sie zum Beispiel eine Regel, die Folgendes auslöst
+
+jeden Samstag
+
+![cron-saturday](../images/cron-saturday.png)
+
+um 7:00 Uhr morgens
+
+![cron-sieben](../images/cron-seven.png)
+
+und es wird in der Zeitplanansicht angezeigt:
+
+![saturday-morning-rule](../images/saturday-rule-schedule.png)
+
+Eine Regel, die wiederholt geplant wird, z. B. jeden Tag um 8:00 Uhr morgens, wird daher an jedem Tag in der Kalenderansicht angezeigt.
+
+### Persönliche Widgets:
 Sie können die Bibliothek der Widgets, die Ihnen zur Verfügung stehen, erweitern, indem Sie persönliche Widgets erstellen, entweder selbst oder durch Kopieren von Beispielen aus der Community; dann können Sie sie auf Seiten wiederverwenden, bei Bedarf auch mehrfach, indem Sie einfach ihre Eigenschaften nach Ihren Bedürfnissen konfigurieren.
 Um ein neues persönliches Widget hinzuzufügen, klicken Sie als Administrator auf Entwicklerwerkzeuge und dann auf Widgets. Verwenden Sie die "+"-Schaltfläche, um ein neues Widget zu erstellen:
 
