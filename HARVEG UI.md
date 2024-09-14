@@ -4,13 +4,18 @@
 Die Startseite der Haupt-UI besteht aus 4 Registerkarten und bietet einer Übersicht über die Gesamtanlage;
 3 Registerkarten, die eine generierte Ansicht Ihres Modells (siehe Modell) darstellen und nach Standort, Ausrüstung und Eigenschaften geordnet sind. (Tabs unten am Bildrand)
 
+**Developer Sidebar:**  
+Zur Unterstützung in der Bedienung von openHAB kann mit folgender Tastenkombination das Hilfe-Kontextmenue gestartet werden.(Shift+Alt+D)
+
 **HabAPP**
-Die HABPanel-Benutzeroberfläche wird standardmäßig installiert und ermöglicht die Erstellung von benutzerfreundlichen Dashboards neben der HAuptseite, die sich besonders für (z. B. an der Wand montierte) Tablets eignen. Diese Dashboards werden für den Schüler-Steuerung aus dem Klassenzimmer verwendet. 
-* Link1
-* Link2
-* Link3
-* Link4
-* Link5
+Das HabAPP-Panel ist eine zusätzliche Benutzeroberfläche welche standardmäßig installiert ist. Damit wird können benutzerfreundliche Bedienoberflächen, sogenannte Panels, erstellt werden, die sich besonders für (z. B. an der Wand montierte) Tablets eignen. Diese Panels werden für den Schüler-Steuerung aus dem Klassenzimmer verwendet.
+Folgende Bedienpanels wurden erstellt und stehen über einen individuellen Link zur Verfügung. Sobald sich ein Benutzer authentifiziert hat, kann er auf alle Panels zugreifen, wenn er über den Link verfügt.
+* [Link Bedien-Panel alle Tablare](https://home.myopenhab.org/habpanel/index.html#/view/Main)
+* [Link Tablar 11](https://home.myopenhab.org/habpanel/index.html#/view/Gartenrobi715111213141511)
+* [Link Tablar 12](https://home.myopenhab.org/habpanel/index.html#/view/Gartenrobi780111213141512)
+* [Link Tablar 13](https://home.myopenhab.org/habpanel/index.html#/view/Gartenrobi845111213141513)
+* [Link Tablar 14](https://home.myopenhab.org/habpanel/index.html#/view/Gartenrobi910111213141514)
+* [Link Tablar 15](https://home.myopenhab.org/habpanel/index.html#/view/Gartenrobi975111213141515)
 
 **In der folgenden Tabelle sind die verschiedenen Seitentypen und ihre Kompatibilität zusammengefasst:**
 
