@@ -16,9 +16,9 @@ Folgende Bedienpanels wurden erstellt und stehen über einen individuellen Link 
 
 ## **Haupt-UI Seitentypen und ihre Kompatibilität:**
 
-|Typ|Gestaltet in|Verwendet in Haupt-UI|Gespeichert in|
+|Typ|Gestaltet in|Verwendet in GUI|Gespeichert in|
 |----|-----------|---------|---------|
-|Home|Haupt-UI|Haupt-UI|JSON DB|
+|Home|Haupt-UI|Ja|JSON DB|
 |[Chart](./Diagramm-Seiten.html)|Haupt-UI|Ja|JSON DB|
 |[Tabbed](./Registerkarten-Seiten.html)|Haupt-UI|Ja|JSON DB|
 |[Sitemap](./sitemaps.html)|Haupt-UI oder `.sitemap`-Datei|Nein|Konfigurationsordner oder JSON DB|
