@@ -4,11 +4,8 @@
 Die Startseite der Haupt-UI besteht aus 4 Registerkarten und bietet einer Übersicht über die Gesamtanlage;
 3 Registerkarten, die eine generierte Ansicht Ihres Modells (siehe Modell) darstellen und nach Standort, Ausrüstung und Eigenschaften geordnet sind. (Tabs unten am Bildrand)
 
-**Developer Sidebar:**  
-Zur Unterstützung in der Bedienung von openHAB kann mit folgender Tastenkombination das Hilfe-Kontextmenue gestartet werden.(Shift+Alt+D)
-
 **HabAPP**
-Das HabAPP-Panel ist eine zusätzliche Benutzeroberfläche welche standardmäßig installiert ist. Damit wird können benutzerfreundliche Bedienoberflächen, sogenannte Panels, erstellt werden, die sich besonders für (z. B. an der Wand montierte) Tablets eignen. Diese Panels werden für den Schüler-Steuerung aus dem Klassenzimmer verwendet.
+Das HabAPP-Panel ist eine zusätzliche Benutzeroberfläche welche standardmäßig installiert ist. Damit können benutzerfreundliche html-Bedienoberflächen, sogenannte Panels erstellt werden, die sich besonders für Touchscreens (z. B. an der Wand montierte Tablets) eignen. Diese Panels werden für die Schüler-Steuerung verwendet, welche aus den Klassenzimmer remote erfolgt.
 Folgende Bedienpanels wurden erstellt und stehen über einen individuellen Link zur Verfügung. Sobald sich ein Benutzer authentifiziert hat, kann er auf alle Panels zugreifen, wenn er über den Link verfügt.
 * [Link Bedien-Panel alle Tablare](https://home.myopenhab.org/habpanel/index.html#/view/Main)
 * [Link Tablar 11](https://home.myopenhab.org/habpanel/index.html#/view/Gartenrobi715111213141511)
@@ -17,32 +14,32 @@ Folgende Bedienpanels wurden erstellt und stehen über einen individuellen Link 
 * [Link Tablar 14](https://home.myopenhab.org/habpanel/index.html#/view/Gartenrobi910111213141514)
 * [Link Tablar 15](https://home.myopenhab.org/habpanel/index.html#/view/Gartenrobi975111213141515)
 
-**In der folgenden Tabelle sind die verschiedenen Seitentypen und ihre Kompatibilität zusammengefasst:**
+## **Haupt-UI Seitentypen und ihre Kompatibilität:**
 
-|Typ|Gestaltet in|Angesehen in|Gespeichert in|
+|Typ|Gestaltet in|Verwendet in Haupt-UI|Gespeichert in|
 |----|-----------|---------|---------|
 |Home|Haupt-UI|Haupt-UI|JSON DB|
-|[Sitemap](./sitemaps.html)|Haupt-UI oder `.sitemap`-Datei|Basic UI, iOS/Android Apps und andere|Konfigurationsordner oder JSON DB|
-|[Layout](./layout-pages.html)|Haupt-UI|Haupt-UI|JSON DB|
-|[Map](./Karte-Seiten.html)|Haupt-UI|Haupt-UI|JSON DB|
-|[Floorplan](./Grundriss-Seiten.html)|Haupt UI|Haupt UI|JSON DB|
-|[Chart](./Diagramm-Seiten.html)|Haupt-UI|Haupt-UI|JSON DB|
-|[Tabbed](./Registerkarten-Seiten.html)|Haupt-UI|Haupt-UI|JSON DB|
+|[Chart](./Diagramm-Seiten.html)|Haupt-UI|Ja|JSON DB|
+|[Tabbed](./Registerkarten-Seiten.html)|Haupt-UI|Ja|JSON DB|
+|[Sitemap](./sitemaps.html)|Haupt-UI oder `.sitemap`-Datei|Nein|Konfigurationsordner oder JSON DB|
+|[Layout](./layout-pages.html)|Haupt-UI|Nein|JSON DB|
+|[Map](./Karte-Seiten.html)|Haupt-UI|Nein|JSON DB|
+|[Floorplan](./Grundriss-Seiten.html)|Haupt UI|Nein|JSON DB|
 
 
->https://www.openhab.org/docs/ui/
-
+>https://www.openhab.org/docs/ui/  
 
 ### Modell
 Mit dem semantischen Modell können Sie Ihre openHAB-Objekte gruppieren und kategorisieren, um zusätzliche reale Beziehungen und Informationen über sie bereitzustellen. openHAB kann diese Informationen verwenden, um automatisch die Registerkarten Standort, Ausrüstung und Eigenschaften auf der Startseite zu generieren.
 Jedes semantische Modellobjekt (Standort, Ausrüstung oder Punkt) ist ein normales openHAB-Element mit semantischen Tags und in semantischen Gruppen angeordnet. Es ist wichtig zu beachten, dass nicht alle Ihre Objekte in das semantische Modell aufgenommen werden müssen. Für die meisten Systeme ist es sinnvoll, nur die Elemente aufzunehmen, mit denen die Benutzer interagieren werden.
-Auf dieser Seite können Sie das semantische Modell Ihres Systems verwalten:
-**Modell**
+Auf dieser Seite kann das semantische Modell der Anlage verwaltet werden:  
+**http://harveg:8080/settings/model/**
 
 
 ### Rules
 Rules sind das Herzstück der Heimautomatisierung - automatisieren Sie mit Auslösern, Aktionen und Bedingungen. Regeln können so einfach sein wie eine Anweisung, ein einzelnes Licht zu einer bestimmten Zeit einzuschalten, aber die Verwendung von Skriptsprachen und Blockly ermöglicht auch viel komplexere Automatisierungen.
 Auf dieser Seite können Sie alle grundlegenden Regeln verwalten, die Sie zu Ihrem System hinzugefügt haben:  
+**http://harveg:8080/settings/rules/**  
 
 ### Schedule
 Nächste zeitbasierte Regeln anzeigen.
@@ -66,7 +63,8 @@ und es wird in der Zeitplanansicht angezeigt:
 
 ![saturday-morning-rule](../images/saturday-rule-schedule.png)
 
-Eine Regel, die wiederholt geplant wird, z. B. jeden Tag um 8:00 Uhr morgens, wird daher an jedem Tag in der Kalenderansicht angezeigt.
+Eine Regel, die wiederholt geplant wird, z. B. jeden Tag um 8:00 Uhr morgens, wird daher an jedem Tag in der Kalenderansicht angezeigt.  
+Link zur Kalenderansicht: **http://harveg:8080/settings/schedule/**  
 
 ### Persönliche Widgets:
 Sie können die Bibliothek der Widgets, die Ihnen zur Verfügung stehen, erweitern, indem Sie persönliche Widgets erstellen, entweder selbst oder durch Kopieren von Beispielen aus der Community; dann können Sie sie auf Seiten wiederverwenden, bei Bedarf auch mehrfach, indem Sie einfach ihre Eigenschaften nach Ihren Bedürfnissen konfigurieren.
@@ -81,3 +79,5 @@ Vorlage für Keypad: https://community.openhab.org/t/keypad/106820
 ### Chart Vorlagen für UI
 Vorlagen für Calendar App: https://echarts.apache.org/examples/en/editor.html?c=heatmap-cartesian  
 
+## **Developer Sidebar:**  
+Zur Unterstützung in der Bedienung von openHAB kann mit folgender Tastenkombination das Hilfe-Kontextmenue gestartet werden.(Shift+Alt+D)
