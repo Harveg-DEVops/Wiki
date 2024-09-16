@@ -6,9 +6,8 @@ WLAN Uni - Hub            |  Shelly / HARVEG  |  Sensor Aktor Box, Vielzahl Anbi
 WLAN Uni - Hub HT	        |  Shelly / HARVEG  |  Sensor Box, Feucht. / Temp., 4 Ports,  ohne Sensorik, mit Umschalter  
 WLAN Controller           |	 Andino           |  Schaltzentrale, für Openhab, Grafana,  ohne Sensorik  
 WLAN Controller LTE	      |  Andino           |  Schaltzentrale mit LTE Modem für Openhab, Grafana,  ohne Sensorik  
-Netzwerk - Controller     |  Rasperry / SEEED |  Schaltzentrale für Daten (Back Up) für Openhab, Grafana, Datenbank, 32GB  
+Basic Controller          |  Rasperry PI 4    |  Schaltzentrale mit SSD 128GB (inkl. Back Up) für Openhab, Grafana, Datenbank, 32GB  
 
-https://nextcloud.harveg.ch/index.php/f/6952  
 
 
 ### Openhabian on Raspberry 4 Mod. B
@@ -30,7 +29,7 @@ Konnektivität
 * GPIO	Standardisierter Raspberry Pi 40 pin GPIO Heade
 
 ### Datenspeicher
-Für die speicherhungrige Datenbank und auch um eine genügende hohe Verfügbarkeit zu erhalten, verwenden wir nur hochwertige SD Karten ab 32GB, im Fall das eine USV vorhanden ist. Wenn keine USV angeschlossen wird welche ein sicheren shut-down garantiert müssen wir dem Raspberry pi über USB 3.0 einen externen NVME Datenträger anbinden:
+Für die speicherhungrige Datenbank und auch um eine genügende hohe Verfügbarkeit zu erhalten, verwenden wir nur hochwertige SD Karten ab 32GB, im Fall das eine USV vorhanden ist. Wenn keine USV angeschlossen wird welche ein sicheren shut-down garantiert müssen wir dem Raspberry pi über USB 3.0 einen externen SSD Datenträger anbinden:
 * Gehäuse: https://www.raidsonic.de/index.php?we_objectID=5665
 * Speicher: https://www.intenso.de/produkte/solid-state-drives/m.2-SSD-PCIe
 
