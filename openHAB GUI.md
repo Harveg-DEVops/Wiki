@@ -1,8 +1,8 @@
 # Grafische Benutzeroberfläche GUI von openHAB
 
 **Die Startseite**
-Die Startseite der Haupt-UI besteht aus 4 Registerkarten und bietet einer Übersicht über die Gesamtanlage;
-3 Registerkarten, die eine generierte Ansicht Ihres Modells (siehe Modell) darstellen und nach Standort, Ausrüstung und Eigenschaften geordnet sind. (Tabs unten am Bildrand)
+Die Startseite der Haupt-UI besteht aus Registerkarten und bietet einer Übersicht über die Gesamtanlage;
+Es sind 2 Registerkarten, die eine generierte Ansicht Ihres Modells (siehe Modell) darstellen nach Standort, Ausrüstung und Eigenschaften geordnet. (Tabs unten am Bildrand)
 
 **HabAPP**
 Das HabAPP-Panel ist eine zusätzliche Benutzeroberfläche welche standardmäßig installiert ist. Damit können benutzerfreundliche html-Bedienoberflächen, sogenannte Panels erstellt werden, die sich besonders für Touchscreens (z. B. an der Wand montierte Tablets) eignen. Diese Panels werden für die Schüler-Steuerung verwendet, welche aus den Klassenzimmer remote erfolgt.
@@ -19,15 +19,15 @@ Folgende Bedienpanels wurden erstellt und stehen über einen individuellen Link 
 |Typ|Gestaltet in|Verwendet in GUI|Gespeichert in|
 |----|-----------|---------|---------|
 |Home|Haupt-UI|Ja|JSON DB|
-|[Chart](./Diagramm-Seiten.html)|Haupt-UI|Ja|JSON DB|
-|[Tabbed](./Registerkarten-Seiten.html)|Haupt-UI|Ja|JSON DB|
-|[Sitemap](./sitemaps.html)|Haupt-UI oder `.sitemap`-Datei|Nein|Konfigurationsordner oder JSON DB|
-|[Layout](./layout-pages.html)|Haupt-UI|Nein|JSON DB|
-|[Map](./Karte-Seiten.html)|Haupt-UI|Nein|JSON DB|
-|[Floorplan](./Grundriss-Seiten.html)|Haupt UI|Nein|JSON DB|
-
+|[Chart](https://github.com/openhab/openhab-docs/blob/main/ui/chart-pages.md)|Haupt-UI|Ja|JSON DB|
+|[Tabbed](https://github.com/openhab/openhab-docs/blob/main/ui/tabbed-pages.md)|Haupt-UI|Ja|JSON DB|
+|[Sitemap](https://github.com/openhab/openhab-docs/blob/main/ui/sitemaps.md)|Haupt-UI oder `.sitemap`-Datei|Nein|Konfigurationsordner oder JSON DB|
+|[Layout](https://github.com/openhab/openhab-docs/blob/main/ui/layout-pages.md)|Haupt-UI|Nein|JSON DB|
+|[Map](https://github.com/openhab/openhab-docs/blob/main/ui/map-pages.md)|Haupt-UI|Nein|JSON DB|
+|[Floorplan](https://github.com/openhab/openhab-docs/blob/main/ui/floorplan-pages.md)|Haupt UI|Nein|JSON DB|
 
 >https://www.openhab.org/docs/ui/  
+
 
 ### Modell
 Mit dem semantischen Modell können Sie Ihre openHAB-Objekte gruppieren und kategorisieren, um zusätzliche reale Beziehungen und Informationen über sie bereitzustellen. openHAB kann diese Informationen verwenden, um automatisch die Registerkarten Standort, Ausrüstung und Eigenschaften auf der Startseite zu generieren.
