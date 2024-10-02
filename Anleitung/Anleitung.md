@@ -1,14 +1,14 @@
 # Bedienung
 Diese Bedienungsanleitung zeigt eine Übersicht der Bedienvorgänge die auf dem GUI: [Pflanzenroboter Weboberfläche](http:harveg:8080) bereitgestellt werden. Für die Bedienung ist entweder ein Tablet oder ein Bildschirm mit mindestens 1024 Pixel Breite nötig.
->[!INFO]
+>[!CAUTION]
 >
-> Der Harveg Pflanzenroboter sollte nur von instruierten Personen lokal bedient und konfiguriert werden, für Drittpersonen steht eine entsprechend abgesicherten Webzugang zur Verfügung: https://www.myopenhab.org
+> Der Harveg Pflanzenroboter darf nur von instruierten Personen lokal bedient und konfiguriert werden, für Drittpersonen steht eine entsprechend abgesicherten Webzugang zur Verfügung: https://www.myopenhab.org
 
 ## Main GUI (Übersicht)
 
 In der Übersicht wird der aktuelle Zustand des Roboters angezeigt und es können die wichtigsten Konfigurationen vorgenommen werden. Die Ansicht der Übersicht variert je nach Berechtigung des Bedieners. Für das TecLab steht ein Login mit den folgenden Nutzerangaben zur Verfügung, welches genutzt werden kann um Änderungen and der Konfiguration vorzunehmen:
 
->[!ADMIN]
+>[!TIP]
 >
 >teclab pflanzenrobi24
 
@@ -23,7 +23,7 @@ In der Übersicht wird der aktuelle Zustand des Roboters angezeigt und es könne
 
 
 
->[!MORELIKETHIS]
+>[!NOTE]
 >
 >**Time-Laps** ist eine Filmmethode zur beschleunigten Darstellung von Bildabläufen.
 Der 'Zeitraffer' ist eine filmische Methode zur Beschleunigung der Langzeitaufzeichnung von Bewegungsabläufen, bei der die Bildfrequenz (Bildrate) der Aufnahme im Verhältnis zur Abspielfrequenz herabgesetzt wird. Werden die Aufnahmen dann mit normaler Geschwindigkeit abgespielt, scheint der aufgenommene Vorgang schneller abzulaufen. Dadurch werden auch Änderungen sichtbar, die in Echtzeit aufgrund ihrer langsamen Natur vom Menschen nicht oder nur schwer wahrnehmbar sind.
@@ -74,3 +74,11 @@ Die Sequenzen sind jewels so programmiert, dass der Roboter entweder nur die lin
 >Die Pflanzen müssen im [farmbot Web-App](https://wwww.my.farmbot.io) zuerst auf das entsprechende Tablar hinzugefügt werden, damit sie bei der entsprechenden Sequenz berücksichtigt werden. Es können somit auch einzelne Pflanzen entfernt oder verschoben werden, wenn dies auch auf dem Farmbot farm-designer entsprechend nachgeführt wird.
 
 ![Bedien-Panel-Tablar](Bedien-Panel-Tablar%2011.PNG)
+
+<details>
+title: Anleitung
+author: Nicolas Maurer-Zeller
+description: Diese Anleitung dient zur Bedienung des Pflanzenroboter im Projekt teclab
+date: 02.10.2024
+no-loc: [teclab, pflanzenrobi24]
+<details>
