@@ -71,8 +71,10 @@ Dieses Panel dient zur Steuerung des Pflanzenroboters durch Auswahl der gewünsc
 Die Sequenzen sind jewels so programmiert, dass der Roboter entweder nur die linke oder rechte Seite giesst oder falls eine Sequenz auf das ganze Tablar ausgewählt werden kann, alle Pflanzen die im [farmbot farm-designer](https://software.farm.bot/v2/Web-App/farm-designer) hinterlgt sind. 
 >[!IMPORTANT]
 >
->Die Pflanzen müssen im [farmbot Web-App](https://wwww.my.farmbot.io) zuerst auf das entsprechende Tablar hinzugefügt werden, damit sie bei der entsprechenden Sequenz berücksichtigt werden. Es können somit auch einzelne Pflanzen entfernt oder verschoben werden, wenn dies auch auf dem Farmbot farm-designer entsprechend nachgeführt wird.
-
+>Die Pflanzen müssen im [farmbot Web-App](https://my.farmbot.io) zuerst auf das entsprechende Tablar hinzugefügt werden, damit sie bei der entsprechenden Sequenz berücksichtigt werden. Es können somit auch einzelne Pflanzen entfernt oder verschoben werden, wenn dies auch auf dem Farmbot farm-designer entsprechend nachgeführt wird.
+Login: harveg2@icloud.com
+> PW: Siehe Handout
+>
 ![Bedien-Panel-Tablar](Bedien-Panel-Tablar%2011.PNG)
 
 <details>
